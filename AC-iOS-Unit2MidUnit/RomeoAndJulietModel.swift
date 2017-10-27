@@ -7,9 +7,19 @@
 //
 
 import Foundation
-
+class Actor {
+    var name: String
+    var active: Bool
+    var script: String
+    init(name: String, active: Bool, ActorScript: String) {
+        self.active = active
+        self.name = name
+        self.script = ActorScript
+    }
+}
 struct RomeoAndJulietModel {
     //Complete this model
+    var myactor = Actor(name: " ", active: false, ActorScript: " ")
     private let sceneFourTextArr = [
         """
         ROMEO:
@@ -72,4 +82,29 @@ struct RomeoAndJulietModel {
         Too rude, too boisterous, and it pricks like thorn.
         """
         ]
+    private var cast = ["romeo", "benvolio", "mercutio"]
+    
+    func getAllScript() -> String {
+    return sceneFourTextArr.joined(separator: "\n")
+    }
+     mutating func getActorLines(inputActor: String) -> Actor {
+        
+        guard cast.contains(inputActor.lowercased()) else {
+            myactor.active = false
+            myactor.name = "Invalid Name"
+            return myactor
+        }
+        var myActorsLines = ""
+        for actorLines in sceneFourTextArr{
+            if actorLines.contains(inputActor.uppercased()){
+                myActorsLines.append(actorLines + "\n")
+            }
+        }
+        myactor.active = true
+        myactor.name = inputActor
+        myactor.script = myActorsLines
+        return myactor
+    }
+    
+    
 }
