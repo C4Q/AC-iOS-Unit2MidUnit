@@ -7,9 +7,13 @@
 //
 
 import Foundation
-
+struct Message {
+    var name: [String]
+    var message: String?
+}
 struct RomeoAndJulietModel {
     //Complete this model
+    private var display = Message(name: ["ROMEO", "BENVOLIO", "MERCUTIO"], message: nil)
     private let sceneFourTextArr = [
         """
         ROMEO:
@@ -72,4 +76,19 @@ struct RomeoAndJulietModel {
         Too rude, too boisterous, and it pricks like thorn.
         """
         ]
+    mutating func getMessage(word userWord: String?) -> Message {
+        display.message = nil
+        if let userWord = userWord {
+            if display.name.contains(userWord.uppercased()) {
+                display.message = ""
+                for name in sceneFourTextArr {
+                    if name.split(separator: ":")[0] == userWord.uppercased() {
+                        display.message?.append(name)
+                        display.message?.append("\n")
+                    }
+                }
+            }
+        }
+        return display
+    }
 }

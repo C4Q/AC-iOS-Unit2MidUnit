@@ -8,8 +8,13 @@
 
 import Foundation
 
+struct CurrentSentence {
+    var sentence: String
+    var idxSentence: Int?
+}
+
 class PoloniusMonologueModel {
-    //Complete this model
+    private var currentSentence = CurrentSentence(sentence: "", idxSentence: nil)
     private let textArr = ["My liege, and madam, to expostulate",
                  "What majesty should be, what duty is,",
                  "What day is day, night night, and time is time,",
@@ -18,4 +23,16 @@ class PoloniusMonologueModel {
                  "And tediousness the limbs and outward flourishes,",
                  "I will be brief. Your noble son is mad."
                 ]
+    
+    func getSentenceLine() -> String {
+        var index = 0
+        if currentSentence.idxSentence == nil {
+            currentSentence.idxSentence = 0
+        } else {
+            index = currentSentence.idxSentence!
+        }
+        currentSentence.sentence = textArr[index]
+        currentSentence.idxSentence = (textArr.count - 1 == index) ? 0 : index + 1
+        return currentSentence.sentence
+    }
 }
