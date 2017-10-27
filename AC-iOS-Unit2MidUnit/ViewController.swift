@@ -26,6 +26,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         romeoJulietTextField.delegate = self
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     @IBAction func nextLineButtonPressed(_ sender: UIButton) {
         poloniusMonologueTextView.text = polonius.nextLine()
     }
