@@ -22,7 +22,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         lineLabel.text = poloniusModel.getFirstLine()
         enterTextField.delegate = self
-        //invalidNameLabel.isHidden = true
         invalidNameLabel.textColor = UIColor.white
         displayTextView.isEditable = false
     }
@@ -33,7 +32,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard let nameString = textField.text else {
-            invalidNameLabel.isHidden = false
+            invalidNameLabel.textColor = UIColor.red
             displayTextView.text = ""
             textField.resignFirstResponder()
             return false
@@ -42,7 +41,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if returnedTupple.isValid {
             invalidNameLabel.textColor = UIColor.white
             displayTextView.text = randjModel.returnArrayAsText(stringArray: returnedTupple.textArray)
-            displayTextView.isHidden = false
         } else {
             invalidNameLabel.textColor = UIColor.red
             displayTextView.text = ""
