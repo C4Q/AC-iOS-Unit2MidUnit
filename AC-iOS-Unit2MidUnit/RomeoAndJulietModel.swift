@@ -72,4 +72,42 @@ struct RomeoAndJulietModel {
         Too rude, too boisterous, and it pricks like thorn.
         """
         ]
+    
+    private var romeoText: [String] = []
+    private var benvolioText: [String] = []
+    private var mercutioText: [String] = []
+    
+    init() {
+        getRespectiveText()
+    }
+    
+    func isValidName(name: String) -> (Bool, [String]) {
+        switch name {
+        case "romeo":
+            return (true, romeoText)
+        case "benvolio":
+            return (true, benvolioText)
+        case "mercutio":
+            return (true, mercutioText)
+        default:
+            return (false, [""])
+        }
+    }
+    
+    func returnArrayAsText(stringArray: [String]) -> String {
+        return stringArray.reduce(""){$0 + "\n" + $1}
+    }
+    
+    private mutating func getRespectiveText() {
+        for text in sceneFourTextArr {
+            if text.contains("ROMEO") {
+                self.romeoText.append(text)
+            } else if text.contains("BENVOLIO") {
+                self.benvolioText.append(text)
+            } else if text.contains("MERCUTIO") {
+                self.mercutioText.append(text)
+            }
+        }
+    }
+    
 }
