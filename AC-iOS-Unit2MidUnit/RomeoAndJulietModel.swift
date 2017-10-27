@@ -72,4 +72,17 @@ struct RomeoAndJulietModel {
         Too rude, too boisterous, and it pricks like thorn.
         """
         ]
+    
+    var nameScriptArr = [String]()
+    
+    mutating func gatherLines(_ name: String) -> String{
+        for i in 0...sceneFourTextArr.count - 1 {
+            if sceneFourTextArr.contains(name.uppercased()) {
+                nameScriptArr.append(sceneFourTextArr[i])
+            }
+        }
+        return nameScriptArr.joined()
+    }
+    
+    
 }

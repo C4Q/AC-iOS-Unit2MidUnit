@@ -8,12 +8,38 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
+    
+    var count = 0
+    var name: String!
+    @IBOutlet weak var poloniusResult: UILabel!
+    @IBOutlet weak var romeoAndJulietText: UITextView!
+    @IBOutlet weak var nameInput: UITextField!
+    
+    var poloModel = PoloniusMonologueModel()
+    var romAndJulModel = RomeoAndJulietModel()
+    
+    
+    @IBAction func poloniusStr(_ sender: UIButton) {
+        
+        poloniusResult.text = poloModel.nextLine(count)
+        count += 1
+        
+        if count == 7 {
+            count = 0
+        }
+    }
+    
+    private func textFieldShouldReturn(_ textField: UITextField) -> UITextView{
+        
+        romeoAndJulietText.text = romAndJulModel.gatherLines(name)
+        return romeoAndJulietText
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        name = nameInput.text
         // Do any additional setup after loading the view.
-    }
-    
+        }
 }
 
