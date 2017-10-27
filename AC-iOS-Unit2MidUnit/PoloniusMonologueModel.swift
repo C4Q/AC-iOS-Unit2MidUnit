@@ -18,4 +18,12 @@ class PoloniusMonologueModel {
                  "And tediousness the limbs and outward flourishes,",
                  "I will be brief. Your noble son is mad."
                 ]
+    private var currentIndex = 0
+    
+    //public
+    func nextLine() -> String {
+        let line = textArr[currentIndex]
+        currentIndex = (currentIndex + 1) % textArr.count
+        return line
+    }
 }
