@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,15 +15,88 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AC_iOS_Unit2MidUnit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Polonious Monologue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVg-3x-iRy">
+                                <rect key="frame" x="62" y="40" width="196" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RUG-Ac-1hO">
+                                <rect key="frame" x="48" y="85.5" width="224" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Romeo and Juliet: Scene IV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LF9-Gb-2gf">
+                                <rect key="frame" x="42" y="211" width="237" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTA-ub-cdl">
+                                <rect key="frame" x="139" y="300" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Romeo, Benvolio or Mercutio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aEo-wT-hvf">
+                                <rect key="frame" x="16.5" y="255" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySu-q4-ngH">
+                                <rect key="frame" x="127.5" y="161" width="65" height="30"/>
+                                <state key="normal" title="Next Line"/>
+                                <connections>
+                                    <action selector="nextLinePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Xu-2A-Yfw"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="a5K-4F-RCZ">
+                                <rect key="frame" x="16" y="336" width="288" height="123.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="a5K-4F-RCZ" firstAttribute="top" secondItem="PTA-ub-cdl" secondAttribute="bottom" constant="15" id="28v-9G-nzE"/>
+                            <constraint firstItem="RUG-Ac-1hO" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="2dP-rf-ZRi"/>
+                            <constraint firstItem="aEo-wT-hvf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8Jf-Pq-3y1"/>
+                            <constraint firstItem="ySu-q4-ngH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="I8P-QF-Hw2"/>
+                            <constraint firstItem="a5K-4F-RCZ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="Jod-yM-YYM"/>
+                            <constraint firstItem="aVg-3x-iRy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="M7X-SB-2gM"/>
+                            <constraint firstItem="aEo-wT-hvf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="QE7-qr-I6f"/>
+                            <constraint firstItem="LF9-Gb-2gf" firstAttribute="top" secondItem="ySu-q4-ngH" secondAttribute="bottom" constant="20" id="QRv-a0-pa9"/>
+                            <constraint firstItem="PTA-ub-cdl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="S62-np-0cg"/>
+                            <constraint firstItem="a5K-4F-RCZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Sul-bl-9AM"/>
+                            <constraint firstItem="aVg-3x-iRy" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="afv-XP-yKj"/>
+                            <constraint firstItem="ySu-q4-ngH" firstAttribute="top" secondItem="RUG-Ac-1hO" secondAttribute="bottom" constant="27.5" id="bF7-Gk-BL4"/>
+                            <constraint firstItem="PTA-ub-cdl" firstAttribute="top" secondItem="aEo-wT-hvf" secondAttribute="bottom" constant="15" id="h0o-Gu-fzZ"/>
+                            <constraint firstItem="RUG-Ac-1hO" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="lrt-ro-6xJ"/>
+                            <constraint firstItem="RUG-Ac-1hO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oj2-li-ww1"/>
+                            <constraint firstItem="LF9-Gb-2gf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="peA-9k-DLm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a5K-4F-RCZ" secondAttribute="bottom" constant="20" id="u0k-FP-Y23"/>
+                            <constraint firstItem="RUG-Ac-1hO" firstAttribute="top" secondItem="aVg-3x-iRy" secondAttribute="bottom" constant="20" id="w4A-Pg-28k"/>
+                            <constraint firstItem="aEo-wT-hvf" firstAttribute="top" secondItem="LF9-Gb-2gf" secondAttribute="bottom" constant="20" id="z21-lt-HfA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="invalidNameMessage" destination="PTA-ub-cdl" id="c4v-uV-g7r"/>
+                        <outlet property="monologueSectionDisplayed" destination="RUG-Ac-1hO" id="au0-Lk-GdU"/>
+                        <outlet property="romeoAndJulietScene" destination="aEo-wT-hvf" id="fez-Dm-j1W"/>
+                        <outlet property="romeoAndJulietSceneDisplay" destination="a5K-4F-RCZ" id="nYM-0I-RSS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="132.68365817091455"/>
+            <point key="canvasLocation" x="138.75" y="132.04225352112675"/>
         </scene>
     </scenes>
 </document>

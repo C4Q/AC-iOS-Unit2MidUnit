@@ -72,4 +72,30 @@ struct RomeoAndJulietModel {
         Too rude, too boisterous, and it pricks like thorn.
         """
         ]
+  
+    
+    func characterlines(input: String) -> String{
+        switch input.lowercased() {
+        case "romeo" :
+        
+        return sceneFourTextArr[0] + "\n" + sceneFourTextArr[2] + "\n" + sceneFourTextArr[4] + "\n" + sceneFourTextArr[6] + "\n" + sceneFourTextArr[8]
+            
+        case "mercutio":
+            
+            return sceneFourTextArr[3] + "\n" + sceneFourTextArr[5] + "\n" + sceneFourTextArr[7]
+            
+        case "benvolio":
+            
+            return sceneFourTextArr[1]
+            
+        default:
+            return "X"
+        }
+        
+        
+    }
+    
+    
+    
+    
 }
