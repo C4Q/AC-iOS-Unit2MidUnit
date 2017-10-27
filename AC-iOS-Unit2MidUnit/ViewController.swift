@@ -13,16 +13,19 @@ class ViewController: UIViewController {
     //  //View Outlets
     
     //Label Vars
-    @IBOutlet weak var ponoliusMono: UILabel!
-    @IBOutlet weak var sceneLabel: UILabel!
-    @IBOutlet weak var invalidName: UILabel!
+    @IBOutlet weak var ponoliusMono: UILabel! //P1
+    @IBOutlet weak var sceneLabel: UILabel! //P2
+    @IBOutlet weak var invalidName: UILabel! //P2
     
     //Scroll View Vars
-    @IBOutlet weak var InputFromMono: UIScrollView!
-    @IBOutlet weak var sceneScroll: UIScrollView!
+    @IBOutlet weak var InputFromMono: UIScrollView! //P1
+    @IBOutlet weak var sceneScroll: UIScrollView! //P2
     
     //Next Line Button Outlet
-    @IBOutlet weak var nextLineButton: UIButton!
+    @IBOutlet weak var nextLineButton: UIButton! //P1
+    
+    //Text Box
+    @IBOutlet weak var textBox: UITextField! //P1
     
     
     //Override View Func 
@@ -31,7 +34,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
+    //Action Button
+    @IBAction func nextLineAction(_ button: UIButton) {
+        
+    }
     
     
     
