@@ -18,4 +18,34 @@ class PoloniusMonologueModel {
                  "And tediousness the limbs and outward flourishes,",
                  "I will be brief. Your noble son is mad."
                 ]
+    
+    
+    func initalLine () -> String {
+        return textArr[0]
+    }
+    
+    
+ var count = 0
+   private func countIncrease() {
+        count += 1
+    }
+    func setCurrentLine () -> String {
+        countIncrease()
+        if count == textArr.count{
+           count = 0
+        }
+        return textArr[count]
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
