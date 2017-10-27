@@ -10,7 +10,7 @@ import Foundation
 
 struct RomeoAndJulietModel {
     //Complete this model
-    private let sceneFourTextArr = [
+     let sceneFourTextArr = [
         """
         ROMEO:
         What, shall this speech be spoke for our excuse?
