@@ -58,7 +58,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.UItextViewInput.delegate = self
-        SearchOutPutTextView.text = myActorLines.getAllScript()
+
     }
     
 }
