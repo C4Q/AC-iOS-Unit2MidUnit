@@ -72,4 +72,25 @@ struct RomeoAndJulietModel {
         Too rude, too boisterous, and it pricks like thorn.
         """
         ]
+    var validChars = ["Romeo", "Mercurio", "Benvolio"]
+    
+    enum Characters:String {
+        case romeo = "romeo"
+        case mercurio = "mercurio"
+        case benvolio = "benvolio"
+    }
+
+    var romeoText: String {
+        return sceneFourTextArr.filter({!$0.contains("MERCUTIO") && !$0.contains("BENVOLIO")}).joined()
+    }
+    var mercutioText: String {
+         return sceneFourTextArr.filter({!$0.contains("ROMEO") && !$0.contains("BENVOLIO")}).joined()
+    }
+    var benvolioText: String {
+         return sceneFourTextArr.filter({!$0.contains("MERCUTIO") && !$0.contains("ROMEO")}).joined()
+    }
+
 }
+
+
+
