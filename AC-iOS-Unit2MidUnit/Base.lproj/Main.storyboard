@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,15 +15,97 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AC_iOS_Unit2MidUnit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Polonius Monologue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7LY-yd-MLJ">
+                                <rect key="frame" x="44" y="9" width="327" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHs-rE-dNY" userLabel="lineLabel">
+                                <rect key="frame" x="0.0" y="52" width="404" height="64"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="&quot;Enter Romeo, Benvolio or Mercutio&quot;" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="78E-Y6-KT8" userLabel="inputField">
+                                <rect key="frame" x="29" y="179" width="356" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="sdfgh" translatesAutoresizingMaskIntoConstraints="NO" id="LhR-de-Ler" userLabel="textView">
+                                <rect key="frame" x="44" y="217" width="326" height="514"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid name. Only Romeo, Mercutio &amp; Benvolio are allowed." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZD-8i-ha1" userLabel="invalidNameLabel">
+                                <rect key="frame" x="0.0" y="63" width="404" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Romeo and Juliet: Scene IV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfc-L3-8RT" userLabel="romeoLabel">
+                                <rect key="frame" x="34" y="150" width="336" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkr-4R-UeZ" userLabel="nextLineButton">
+                                <rect key="frame" x="113" y="118" width="179" height="36"/>
+                                <state key="normal" title="Next line"/>
+                                <connections>
+                                    <action selector="nextLineButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hPJ-ev-Bei"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Tfc-L3-8RT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="14" id="0Pl-KX-hVy"/>
+                            <constraint firstAttribute="trailing" secondItem="XHs-rE-dNY" secondAttribute="trailing" constant="10" id="5ig-L8-mtP"/>
+                            <constraint firstItem="xkr-4R-UeZ" firstAttribute="top" secondItem="PZD-8i-ha1" secondAttribute="bottom" constant="26" id="7bQ-aA-LHr"/>
+                            <constraint firstItem="xkr-4R-UeZ" firstAttribute="top" secondItem="XHs-rE-dNY" secondAttribute="bottom" constant="2" id="8dP-7q-foc"/>
+                            <constraint firstItem="7LY-yd-MLJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="9" id="AAy-71-f6N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tfc-L3-8RT" secondAttribute="trailing" constant="24" id="AKT-R6-Hbt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LhR-de-Ler" secondAttribute="trailing" constant="24" id="Dbg-HZ-0sy"/>
+                            <constraint firstItem="78E-Y6-KT8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="159" id="Hof-ZQ-TMW"/>
+                            <constraint firstItem="78E-Y6-KT8" firstAttribute="top" secondItem="Tfc-L3-8RT" secondAttribute="bottom" constant="8" id="IpH-W3-lKs"/>
+                            <constraint firstItem="LhR-de-Ler" firstAttribute="top" secondItem="78E-Y6-KT8" secondAttribute="bottom" constant="8" id="MZ8-0I-S6J"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="78E-Y6-KT8" secondAttribute="trailing" constant="9" id="Miu-YM-GNY"/>
+                            <constraint firstItem="xkr-4R-UeZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="98" id="Rhp-qb-Eep"/>
+                            <constraint firstItem="LhR-de-Ler" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="SWC-BB-wK6"/>
+                            <constraint firstAttribute="trailing" secondItem="PZD-8i-ha1" secondAttribute="trailing" constant="10" id="Sc0-hy-9cK"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="LhR-de-Ler" secondAttribute="bottom" constant="5" id="YGr-J4-dbz"/>
+                            <constraint firstItem="Tfc-L3-8RT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="130" id="axM-qK-mgf"/>
+                            <constraint firstItem="PZD-8i-ha1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="b47-d0-w2d"/>
+                            <constraint firstItem="LhR-de-Ler" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="197" id="bKK-Ed-6zf"/>
+                            <constraint firstItem="XHs-rE-dNY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fSk-JF-poi"/>
+                            <constraint firstAttribute="trailing" secondItem="7LY-yd-MLJ" secondAttribute="trailing" constant="43" id="gew-gh-Y6e"/>
+                            <constraint firstItem="78E-Y6-KT8" firstAttribute="top" secondItem="xkr-4R-UeZ" secondAttribute="bottom" constant="25" id="gq9-yt-9Tb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xkr-4R-UeZ" secondAttribute="trailing" constant="102" id="gx3-oW-LiT"/>
+                            <constraint firstItem="7LY-yd-MLJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="44" id="kFw-to-0ps"/>
+                            <constraint firstItem="78E-Y6-KT8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="9" id="oKs-pd-78E"/>
+                            <constraint firstItem="PZD-8i-ha1" firstAttribute="top" secondItem="7LY-yd-MLJ" secondAttribute="bottom" constant="1" id="obw-Ij-Pyg"/>
+                            <constraint firstItem="PZD-8i-ha1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="63" id="ubV-AM-dKa"/>
+                            <constraint firstItem="XHs-rE-dNY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="52" id="w6l-Zx-Tb8"/>
+                            <constraint firstItem="xkr-4R-UeZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="93" id="wEg-sV-JzK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="inputField" destination="78E-Y6-KT8" id="5fo-6b-L8H"/>
+                        <outlet property="invalidNameLabel" destination="PZD-8i-ha1" id="qfb-Kg-79h"/>
+                        <outlet property="lineLabel" destination="XHs-rE-dNY" id="wU8-B9-KYh"/>
+                        <outlet property="nextLineButton" destination="xkr-4R-UeZ" id="rOo-3M-KLK"/>
+                        <outlet property="textView" destination="LhR-de-Ler" id="WE5-wE-FzK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="132.68365817091455"/>
+            <point key="canvasLocation" x="138.75" y="132.5"/>
         </scene>
     </scenes>
 </document>
