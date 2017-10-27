@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,11 +15,97 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AC_iOS_Unit2MidUnit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Polonuis Monologue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfn-nJ-dw5">
+                                <rect key="frame" x="0.0" y="13" width="320" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SingleQuoteLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4I-R7-PIw">
+                                <rect key="frame" x="0.0" y="64.5" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewg-S9-eUz">
+                                <rect key="frame" x="0.0" y="110" width="320" height="30"/>
+                                <state key="normal" title="Next Line"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                </variation>
+                                <connections>
+                                    <action selector="nextLineButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kpL-Lg-QRd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Romeo And Juliet: Scene IV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Akz-qr-354">
+                                <rect key="frame" x="0.0" y="163.5" width="320" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Romeo, Benvolio or Mercutio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hxu-hw-Fas">
+                                <rect key="frame" x="0.0" y="197.5" width="320" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D78-PL-VHW">
+                                <rect key="frame" x="8" y="280" width="304" height="192"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lho-MW-l5m">
+                                <rect key="frame" x="0.0" y="239.5" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hxu-hw-Fas" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.85" id="15l-HN-mOA"/>
+                            <constraint firstItem="Akz-qr-354" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5fJ-7B-Akj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Akz-qr-354" secondAttribute="trailing" id="7Gb-1N-BXf"/>
+                            <constraint firstItem="Akz-qr-354" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Cyz-BG-Bj3"/>
+                            <constraint firstItem="bfn-nJ-dw5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D0Z-MW-Und"/>
+                            <constraint firstItem="Lho-MW-l5m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EUW-ea-qnx"/>
+                            <constraint firstItem="X4I-R7-PIw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FGc-89-yCo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ewg-S9-eUz" secondAttribute="trailing" id="KWd-z8-q00"/>
+                            <constraint firstItem="D78-PL-VHW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="OCX-b3-svd"/>
+                            <constraint firstItem="X4I-R7-PIw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S0F-IV-xqN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X4I-R7-PIw" secondAttribute="trailing" id="SKr-I9-Pgz"/>
+                            <constraint firstItem="Lho-MW-l5m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TkR-LJ-NLJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bfn-nJ-dw5" secondAttribute="trailing" id="UTM-YN-1nA"/>
+                            <constraint firstItem="ewg-S9-eUz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y20-dr-iwb"/>
+                            <constraint firstItem="X4I-R7-PIw" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.3" id="Yh6-7K-RtT"/>
+                            <constraint firstItem="Hxu-hw-Fas" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZND-B6-Sol"/>
+                            <constraint firstItem="ewg-S9-eUz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bRe-Gs-lHN"/>
+                            <constraint firstItem="Lho-MW-l5m" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="gTz-TZ-ASI"/>
+                            <constraint firstItem="bfn-nJ-dw5" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.1" id="jOI-uB-m2s"/>
+                            <constraint firstItem="Hxu-hw-Fas" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kHg-8U-95v"/>
+                            <constraint firstItem="D78-PL-VHW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lRc-ni-yX6"/>
+                            <constraint firstItem="D78-PL-VHW" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="n5j-Li-Fgw"/>
+                            <constraint firstAttribute="bottom" secondItem="D78-PL-VHW" secondAttribute="bottom" constant="8" id="ntX-Zk-fmF"/>
+                            <constraint firstItem="bfn-nJ-dw5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oC2-If-2E7"/>
+                            <constraint firstItem="Akz-qr-354" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.7" id="oDN-A6-x92"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lho-MW-l5m" secondAttribute="trailing" id="r4e-Uu-puT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hxu-hw-Fas" secondAttribute="trailing" id="sbf-HH-wQg"/>
+                            <constraint firstItem="ewg-S9-eUz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.5" id="vWU-DS-ecq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D78-PL-VHW" secondAttribute="trailing" constant="8" id="yOE-JO-69n"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="LargeQuoteTextView" destination="D78-PL-VHW" id="7ne-Ia-grS"/>
+                        <outlet property="errorMessage" destination="Lho-MW-l5m" id="qiE-Ce-1bL"/>
+                        <outlet property="singleQuoteLabel" destination="X4I-R7-PIw" id="f4P-dm-aDn"/>
+                        <outlet property="textField" destination="Hxu-hw-Fas" id="7hI-Gc-rkE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
