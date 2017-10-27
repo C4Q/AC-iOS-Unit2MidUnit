@@ -18,4 +18,12 @@ class PoloniusMonologueModel {
                  "And tediousness the limbs and outward flourishes,",
                  "I will be brief. Your noble son is mad."
                 ]
+    var nextLine = ""
+
+    func showNextLine() {
+        for line in 0...textArr.count-1 {
+            nextLine = textArr[line]
+            }
+        return 
+    }
 }
