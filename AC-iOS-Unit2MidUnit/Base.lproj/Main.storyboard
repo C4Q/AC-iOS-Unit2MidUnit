@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,15 +15,96 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AC_iOS_Unit2MidUnit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Polonius Monologue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQ2-LJ-evt">
+                                <rect key="frame" x="0.0" y="30" width="414" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gm2-C2-R8H">
+                                <rect key="frame" x="20" y="85" width="374" height="73.666666666666686"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Romeo And Juliet: Scene IV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDX-b9-mIS">
+                                <rect key="frame" x="10" y="242.66666666666666" width="394" height="31.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uE6-df-JGv">
+                                <rect key="frame" x="169" y="188.66666666666666" width="76" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Next Line"/>
+                                <connections>
+                                    <action selector="nextLineButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TrF-G7-gq9"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Romeo, Benvolio, or Mercutio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jqx-03-PFR">
+                                <rect key="frame" x="10" y="284" width="394" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="97o-Qc-xF9" userLabel="hiddenText">
+                                <rect key="frame" x="10.666666666666657" y="324" width="394" height="17"/>
+                                <color key="textColor" red="1" green="0.21581397562358162" blue="0.14830040997359772" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nB-i2-BGA">
+                                <rect key="frame" x="10" y="351" width="394" height="375"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gm2-C2-R8H" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="84l-hv-ydT"/>
+                            <constraint firstItem="4nB-i2-BGA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="9CW-3q-lMW"/>
+                            <constraint firstItem="Jqx-03-PFR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="C2m-ac-3Hl"/>
+                            <constraint firstItem="gm2-C2-R8H" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="FpB-oi-kHk"/>
+                            <constraint firstItem="vQ2-LJ-evt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="INi-23-hQr"/>
+                            <constraint firstItem="97o-Qc-xF9" firstAttribute="centerX" secondItem="Jqx-03-PFR" secondAttribute="centerX" id="JnA-Vm-UxX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Jqx-03-PFR" secondAttribute="trailing" id="K3P-CQ-cDg"/>
+                            <constraint firstItem="EDX-b9-mIS" firstAttribute="top" secondItem="uE6-df-JGv" secondAttribute="bottom" constant="20" id="O0P-w6-D8F"/>
+                            <constraint firstItem="4nB-i2-BGA" firstAttribute="top" secondItem="97o-Qc-xF9" secondAttribute="bottom" constant="10" id="OnJ-ee-QWU"/>
+                            <constraint firstItem="Jqx-03-PFR" firstAttribute="top" secondItem="EDX-b9-mIS" secondAttribute="bottom" constant="10" id="Pd4-XI-M6M"/>
+                            <constraint firstItem="Jqx-03-PFR" firstAttribute="top" secondItem="EDX-b9-mIS" secondAttribute="bottom" constant="10" id="SiZ-Oh-wgK"/>
+                            <constraint firstItem="vQ2-LJ-evt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="YDT-dv-BqI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4nB-i2-BGA" secondAttribute="bottom" constant="10" id="ZXM-jJ-VO4"/>
+                            <constraint firstItem="uE6-df-JGv" firstAttribute="top" secondItem="gm2-C2-R8H" secondAttribute="bottom" constant="30" id="aM0-xU-Wfn"/>
+                            <constraint firstItem="gm2-C2-R8H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="atx-VK-6Zn"/>
+                            <constraint firstItem="gm2-C2-R8H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64.999999999999986" id="b8o-M9-s8S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4nB-i2-BGA" secondAttribute="trailing" constant="10" id="bpK-K0-pZC"/>
+                            <constraint firstAttribute="trailing" secondItem="EDX-b9-mIS" secondAttribute="trailing" constant="10" id="cCR-DY-mbE"/>
+                            <constraint firstItem="EDX-b9-mIS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="com-hc-QQd"/>
+                            <constraint firstItem="uE6-df-JGv" firstAttribute="centerX" secondItem="gm2-C2-R8H" secondAttribute="centerX" id="fHd-1g-QpS"/>
+                            <constraint firstItem="vQ2-LJ-evt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oOC-WD-hbY"/>
+                            <constraint firstItem="Jqx-03-PFR" firstAttribute="top" secondItem="EDX-b9-mIS" secondAttribute="bottom" constant="10" id="oyi-jH-yad"/>
+                            <constraint firstItem="vQ2-LJ-evt" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pMp-hM-E7k"/>
+                            <constraint firstItem="Jqx-03-PFR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qkg-ck-sYA"/>
+                            <constraint firstItem="97o-Qc-xF9" firstAttribute="width" secondItem="Jqx-03-PFR" secondAttribute="width" id="slg-1u-80Q"/>
+                            <constraint firstItem="97o-Qc-xF9" firstAttribute="top" secondItem="Jqx-03-PFR" secondAttribute="bottom" constant="10" id="t3h-Rc-8Vs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="enterNameTextField" destination="Jqx-03-PFR" id="F4R-pe-00h"/>
+                        <outlet property="hiddenText" destination="97o-Qc-xF9" id="3Zo-jc-lPm"/>
+                        <outlet property="nextLineButton" destination="uE6-df-JGv" id="VWd-g3-npv"/>
+                        <outlet property="quotesDisplay" destination="4nB-i2-BGA" id="qhj-S6-PHA"/>
+                        <outlet property="textDisplay" destination="gm2-C2-R8H" id="leO-wH-db3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="132.68365817091455"/>
+            <point key="canvasLocation" x="139.13043478260872" y="132.06521739130434"/>
         </scene>
     </scenes>
 </document>

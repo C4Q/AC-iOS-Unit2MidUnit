@@ -8,12 +8,73 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet weak var textDisplay: UITextView!
+    
+    @IBOutlet weak var nextLineButton: UIButton!
+    
+    @IBOutlet weak var enterNameTextField: UITextField!
+    
+    
+    @IBOutlet weak var hiddenText: UITextField!
+    
+    @IBOutlet weak var quotesDisplay: UITextView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        currentDisplayText()
+        self.enterNameTextField.delegate = self
+        hiddenText.isHidden = true
+        quotesDisplay.text = ""
     }
     
+    let poloniusModel = PoloniusMonologueModel()
+    var romeoAndJulietModel = RomeoAndJulietModel()
+    
+    @IBAction func nextLineButtonPressed(_ sender: UIButton) {
+        currentDisplayText()
+    }
+    
+    
+    func currentDisplayText() {
+        poloniusModel.readALine()
+        textDisplay.text = poloniusModel.currentLineText
+    }
+    
+
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        guard let enteredName = enterNameTextField.text else {
+            return false
+        }
+        switch romeoAndJulietModel.name(enteredName) {
+        case .romeo:
+            for quote in romeoAndJulietModel.personQuotes {
+                quotesDisplay.text.append(quote + "\n")
+            }
+        case .benvolio:
+            for quote in romeoAndJulietModel.personQuotes {
+                quotesDisplay.text.append(quote + "\n")
+            }
+        case .mercutio:
+            for quote in romeoAndJulietModel.personQuotes {
+                quotesDisplay.text.append(quote + "\n")
+            }
+        case .invalid:
+            hiddenText.text = "Invalid Name"
+            hiddenText.isHidden = false
+        }
+        return true
+    }
+    
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        enterNameTextField.text = ""
+        hiddenText.isHidden = true
+        quotesDisplay.text = ""
+    }
 }
 
