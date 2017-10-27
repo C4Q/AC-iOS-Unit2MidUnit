@@ -72,4 +72,27 @@ struct RomeoAndJulietModel {
         Too rude, too boisterous, and it pricks like thorn.
         """
         ]
+    
+    var displayText: String = ""
+  mutating  func getDisplayText(input: String) -> Bool {
+        if input.lowercased() == "romeo" {
+            displayText = sceneFourTextArr[0] + "\n" + sceneFourTextArr[2] + "\n" + sceneFourTextArr[4] + "\n" + sceneFourTextArr[6] + "\n" + sceneFourTextArr[8]
+            return true
+    }
+    if input.lowercased() == "benvolio" {
+        displayText = sceneFourTextArr[1]
+        return true
+    }
+    if input.lowercased() == "mercutio" {
+        displayText = sceneFourTextArr[3] + "\n" + sceneFourTextArr[5] + "\n" + sceneFourTextArr[7]
+        return true
+    }
+    return false
+    }
+    
+    
+    
+    
+    
+    
 }
