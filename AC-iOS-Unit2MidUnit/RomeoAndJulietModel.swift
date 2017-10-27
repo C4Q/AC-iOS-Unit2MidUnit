@@ -72,4 +72,21 @@ struct RomeoAndJulietModel {
         Too rude, too boisterous, and it pricks like thorn.
         """
         ]
+    
+    var romeoText: String { return makeString(array: sceneFourTextArr, prefix: "ROMEO") }
+    var benvolioText: String { return makeString(array: sceneFourTextArr, prefix: "BENVOLIO") }
+    var mercutioText: String { return makeString(array: sceneFourTextArr, prefix: "MERCUTIO") }
+    
+    func makeString(array: [String], prefix: String) -> String {
+        var stringOutput = ""
+        for i in array {
+            if i.hasPrefix(prefix) {
+                stringOutput += i + "\n"
+            }
+        }
+        return stringOutput
+    }
+    
 }
+
+
