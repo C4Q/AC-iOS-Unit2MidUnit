@@ -9,7 +9,21 @@
 import Foundation
 
 struct RomeoAndJulietModel {
-    //Complete this model
+    //Public API
+    func name(of name: String) -> (lines: String, exists: Bool) {
+        switch name.lowercased() {
+        case "romeo":
+            return (romeoLines, true)
+        case "benvolio":
+            return (benvolioLines, true)
+        case "mercutio":
+            return (mercutioLines, true)
+        default:
+            return ("Invalid Name!!!!! smh 😒", false)
+        }
+    }
+    
+    //Private Implementation
     private let sceneFourTextArr = [
         """
         ROMEO:
@@ -72,4 +86,17 @@ struct RomeoAndJulietModel {
         Too rude, too boisterous, and it pricks like thorn.
         """
         ]
+    
+    private var romeoLines: String {
+        return sceneFourTextArr.filter{$0.contains("ROMEO")}.joined(separator: "\n\n")
+    }
+    
+    private var benvolioLines: String {
+        return sceneFourTextArr.filter{$0.contains("BENVOLIO")}.joined(separator: "\n\n")
+    }
+    
+    private var mercutioLines: String {
+        return sceneFourTextArr.filter{$0.contains("MERCUTIO")}.joined(separator: "\n\n")
+    }
+    
 }

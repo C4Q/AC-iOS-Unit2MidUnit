@@ -9,7 +9,15 @@
 import Foundation
 
 class PoloniusMonologueModel {
-    //Complete this model
+    //Public API
+    var firstLine: String
+    
+    func nextLine() -> String {
+        currentIndex = (currentIndex < textArr.count - 1) ? (currentIndex + 1) : (0)
+        return textArr[currentIndex]
+    }
+    
+    //Private Implementation
     private let textArr = ["My liege, and madam, to expostulate",
                  "What majesty should be, what duty is,",
                  "What day is day, night night, and time is time,",
@@ -18,4 +26,8 @@ class PoloniusMonologueModel {
                  "And tediousness the limbs and outward flourishes,",
                  "I will be brief. Your noble son is mad."
                 ]
+    private var currentIndex = 0
+    init() {
+        firstLine = textArr[currentIndex]
+    }
 }
