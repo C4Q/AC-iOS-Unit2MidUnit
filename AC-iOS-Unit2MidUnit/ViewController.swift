@@ -10,10 +10,30 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //  //View Outlets
+    
+    //Label Vars
+    @IBOutlet weak var ponoliusMono: UILabel!
+    @IBOutlet weak var sceneLabel: UILabel!
+    @IBOutlet weak var invalidName: UILabel!
+    
+    //Scroll View Vars
+    @IBOutlet weak var InputFromMono: UIScrollView!
+    @IBOutlet weak var sceneScroll: UIScrollView!
+    
+    //Next Line Button Outlet
+    @IBOutlet weak var nextLineButton: UIButton!
+    
+    
+    //Override View Func 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    
+    
+    
     
 }
 

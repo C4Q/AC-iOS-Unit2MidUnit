@@ -88,6 +88,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="InputFromMono" destination="Fxy-lt-jvW" id="chT-Kd-wXM"/>
+                        <outlet property="invalidName" destination="cq3-8d-uM5" id="DcZ-ld-Xu9"/>
+                        <outlet property="nextLineButton" destination="klh-Z6-FL7" id="a5T-EX-v4w"/>
+                        <outlet property="ponoliusMono" destination="YyL-DU-ng9" id="4j0-5I-GKQ"/>
+                        <outlet property="sceneLabel" destination="aKV-rc-MSM" id="1iv-AC-O8j"/>
+                        <outlet property="sceneScroll" destination="yu4-Ee-080" id="cT5-eN-cUc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
