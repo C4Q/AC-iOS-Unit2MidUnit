@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,13 +17,100 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Polonius Monologue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAD-L1-D5e">
+                                <rect key="frame" x="0.0" y="20" width="375" height="35.5"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Rk8-On-nXO">
+                                <rect key="frame" x="20" y="75.5" width="335" height="99.5"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJc-9i-AS7">
+                                <rect key="frame" x="150" y="195" width="75" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Next Line"/>
+                                <connections>
+                                    <action selector="nextLineButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DDJ-sv-GwE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Romeo and Juliet: Scene IV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spy-bT-3WW">
+                                <rect key="frame" x="0.0" y="245" width="375" height="39"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Romeo, Benvolio or Mercutio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UeZ-0s-vbH">
+                                <rect key="frame" x="30" y="304" width="315" height="44"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rp-gE-3g6">
+                                <rect key="frame" x="131" y="364" width="113" height="21"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6C8-P2-mAe">
+                                <rect key="frame" x="20" y="404" width="335" height="243"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="AJc-9i-AS7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="0UW-PB-be0"/>
+                            <constraint firstItem="4rp-gE-3g6" firstAttribute="top" secondItem="UeZ-0s-vbH" secondAttribute="bottom" constant="16" id="1dM-B5-lCE"/>
+                            <constraint firstItem="cAD-L1-D5e" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="56d-7o-Fxb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="cAD-L1-D5e" secondAttribute="top" id="7P7-Ej-f3v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6C8-P2-mAe" secondAttribute="trailing" constant="20" id="87H-5f-Ib1"/>
+                            <constraint firstItem="UeZ-0s-vbH" firstAttribute="top" secondItem="Spy-bT-3WW" secondAttribute="bottom" constant="20" id="AQn-yy-8la"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4rp-gE-3g6" secondAttribute="bottom" constant="282" id="ETX-jB-osq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4rp-gE-3g6" secondAttribute="trailing" constant="131" id="HiL-hW-kgE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AJc-9i-AS7" secondAttribute="trailing" constant="150" id="IPd-eQ-Jsd"/>
+                            <constraint firstItem="Spy-bT-3WW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KMd-1m-lHQ"/>
+                            <constraint firstItem="4rp-gE-3g6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="131" id="LJe-WI-RaB"/>
+                            <constraint firstItem="Rk8-On-nXO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LUE-4K-VO0"/>
+                            <constraint firstItem="AJc-9i-AS7" firstAttribute="top" secondItem="Rk8-On-nXO" secondAttribute="bottom" constant="20" id="MAz-ql-Cjl"/>
+                            <constraint firstItem="6C8-P2-mAe" firstAttribute="top" secondItem="4rp-gE-3g6" secondAttribute="top" constant="40" id="OzX-Op-Tyn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Spy-bT-3WW" secondAttribute="trailing" id="PyF-CA-uXi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cAD-L1-D5e" secondAttribute="bottom" multiplier="12" id="Qmn-CK-qef"/>
+                            <constraint firstItem="Rk8-On-nXO" firstAttribute="top" secondItem="cAD-L1-D5e" secondAttribute="bottom" constant="20" id="TFb-Qh-QsR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6C8-P2-mAe" secondAttribute="bottom" constant="20" id="Tu8-rl-I6L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AJc-9i-AS7" secondAttribute="bottom" constant="442" id="ZYQ-Cs-ob6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UeZ-0s-vbH" secondAttribute="bottom" constant="319" id="c1K-c1-IKi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Spy-bT-3WW" secondAttribute="bottom" constant="383" id="edA-bP-04f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UeZ-0s-vbH" secondAttribute="trailing" constant="30" id="fzU-a2-eeM"/>
+                            <constraint firstItem="Spy-bT-3WW" firstAttribute="top" secondItem="AJc-9i-AS7" secondAttribute="bottom" constant="20" id="hIz-o9-PhF"/>
+                            <constraint firstItem="Spy-bT-3WW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="uGZ-ja-iez"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rk8-On-nXO" secondAttribute="trailing" constant="20" id="uJw-GR-dXI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Rk8-On-nXO" secondAttribute="bottom" constant="492" id="vYo-qm-Wpr"/>
+                            <constraint firstItem="6C8-P2-mAe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="w5D-lW-pKz"/>
+                            <constraint firstItem="cAD-L1-D5e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zEm-Cm-G4c"/>
+                            <constraint firstItem="UeZ-0s-vbH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="zRa-ip-HZd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="inputField" destination="UeZ-0s-vbH" id="ryu-o0-ACR"/>
+                        <outlet property="invalidEntryLabel" destination="4rp-gE-3g6" id="zAx-PB-WBf"/>
+                        <outlet property="poloniusMonologueTextView" destination="Rk8-On-nXO" id="Kw1-kQ-C1O"/>
+                        <outlet property="romeoAndJulietTextView" destination="6C8-P2-mAe" id="NoP-NU-qSC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="132.68365817091455"/>
+            <point key="canvasLocation" x="140" y="132.26600985221674"/>
         </scene>
     </scenes>
 </document>
