@@ -19,7 +19,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func nextLineButton(_ sender: UIButton) {
-        //      displayMonologue.text = monologueModel.textArr[index]
+       monologueModel.printLinesinlabel()
     }
     
     

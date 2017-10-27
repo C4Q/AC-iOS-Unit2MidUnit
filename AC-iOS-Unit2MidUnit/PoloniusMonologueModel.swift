@@ -19,5 +19,9 @@ class PoloniusMonologueModel {
                  "I will be brief. Your noble son is mad."
                 ]
     
-
+    func printLinesinlabel() {
+        for line in textArr {
+            print(line)
+        }
+    }
 }
