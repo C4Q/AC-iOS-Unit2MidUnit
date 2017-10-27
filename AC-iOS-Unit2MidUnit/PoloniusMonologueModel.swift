@@ -27,7 +27,6 @@ class PoloniusMonologueModel {
         currentLine = 1
     }
     
-    
     func getNextLine() -> String {
         let nextLine = self.textArr[currentLine % totalLines]
         self.currentLine += 1

@@ -22,6 +22,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         lineLabel.text = poloniusModel.getFirstLine()
         enterTextField.delegate = self
+        //invalidNameLabel.isHidden = true
+        invalidNameLabel.textColor = UIColor.white
+        displayTextView.isEditable = false
     }
     
     @IBAction func nextLinePressed(_ sender: Any) {
@@ -31,22 +34,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard let nameString = textField.text else {
             invalidNameLabel.isHidden = false
+            displayTextView.text = ""
             textField.resignFirstResponder()
             return false
         }
         let returnedTupple:(isValid: Bool, textArray: [String]) = randjModel.isValidName(name: nameString.lowercased())
         if returnedTupple.isValid {
-            invalidNameLabel.isHidden = true
+            invalidNameLabel.textColor = UIColor.white
             displayTextView.text = randjModel.returnArrayAsText(stringArray: returnedTupple.textArray)
             displayTextView.isHidden = false
         } else {
-            invalidNameLabel.isHidden = false
+            invalidNameLabel.textColor = UIColor.red
+            displayTextView.text = ""
         }
         textField.resignFirstResponder()
         return true
     }
-    
 
-    
 }
 
