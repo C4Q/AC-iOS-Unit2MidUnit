@@ -8,12 +8,78 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
+    //polonius outlets
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var pTitleLabel: UILabel!
+    @IBOutlet weak var poloniusTextView: UITextView!
+    
+    //romeoandjuliet outlets
+    @IBOutlet weak var rJTitleLabel: UILabel!
+    @IBOutlet weak var displayLabel: UILabel!
+    @IBOutlet weak var rJTextView: UITextView!
+    @IBOutlet weak var rJTextField: UITextField!
+    
+    let poloniusRules = PoloniusMonologueModel()
+    let romeoAndJulietRules = RomeoAndJulietModel()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        rJTextField.delegate = self
+        displayLabel.isHidden = true
     }
     
+    
+    var poemContinues = true
+    //polonius next button
+    
+    ///next button pressed == next index of textArr
+    /// I wanted to code when the user presses the button a new index of the textArr array would appear
+    @IBAction func nextButtonPressed(_ sender: UIButton) {
+        //when button is pressed show next line
+        poloniusTextView.text = poloniusRules.getNewPoemLine()
+        
+    }
+    
+    //romeo and juliet
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard let text = rJTextField else {
+            return false
+        }
+        
+        
+        ///I wanted to switch on the enum nameState to get the desired paragraph
+        //        switch romeoAndJulietRules.nameState{
+        //        case .romeo:
+        //            displayLabel.text = romeoAndJulietRules.getRomeo()
+        //        case .benvolio
+        //            displayLabel.text = romeoAndJulietRules.getRomeo()
+        //        case .mercutio
+        //            displayLabel.text = romeoAndJulietRules.getRomeo()
+        //        case .invalid
+        //            displayLabel.text = "Invalid Name"
+        //
+        //        }
+        resignFirstResponder()
+        return true
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
-

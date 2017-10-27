@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,15 +14,104 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AC_iOS_Unit2MidUnit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Polonius Monologue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDt-ZV-EfT">
+                                <rect key="frame" x="83" y="51" width="260" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hx8-5D-mgf">
+                                <rect key="frame" x="174.66666666666666" y="150" width="65" height="30"/>
+                                <state key="normal" title="Next Line">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ia-NB-YcZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Romeo And Juliet: Scene IV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGg-Gx-1UB">
+                                <rect key="frame" x="90" y="317" width="234" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JhL-Nv-VAJ" userLabel="R&amp;J Text View">
+                                <rect key="frame" x="8" y="416" width="398" height="312"/>
+                                <color key="backgroundColor" red="1" green="0.96305591168193894" blue="0.073381932164992336" alpha="0.78034032534246578" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="312" id="80A-pn-Abn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Zw7-HV-ljU" userLabel="Polonius Text View">
+                                <rect key="frame" x="8" y="88" width="398" height="43"/>
+                                <color key="backgroundColor" red="1" green="0.72821294835791817" blue="0.54920554681135558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="Phz-Me-Tk8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Romeo, Benvolio or Mercutio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7rC-Gm-UoR">
+                                <rect key="frame" x="90" y="354" width="234" height="28"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="display label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49D-da-PPo">
+                                <rect key="frame" x="160" y="387" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.031677939375917674" blue="0.11509871784621917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0099074703050674989" green="0.089650986409026495" blue="0.35122541243654826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zw7-HV-ljU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="4hj-IO-joq"/>
+                            <constraint firstItem="7rC-Gm-UoR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6as-qv-5R5"/>
+                            <constraint firstItem="7rC-Gm-UoR" firstAttribute="top" secondItem="HGg-Gx-1UB" secondAttribute="bottom" constant="8" symbolic="YES" id="C7U-xK-dyO"/>
+                            <constraint firstItem="EDt-ZV-EfT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="83" id="FUj-Bw-pVs"/>
+                            <constraint firstItem="JhL-Nv-VAJ" firstAttribute="centerX" secondItem="HGg-Gx-1UB" secondAttribute="centerX" id="IGn-1B-hsE"/>
+                            <constraint firstItem="JhL-Nv-VAJ" firstAttribute="top" secondItem="49D-da-PPo" secondAttribute="bottom" constant="15" id="OI9-dm-onh"/>
+                            <constraint firstItem="Hx8-5D-mgf" firstAttribute="top" secondItem="Zw7-HV-ljU" secondAttribute="bottom" constant="19" id="OZR-da-SQq"/>
+                            <constraint firstItem="JhL-Nv-VAJ" firstAttribute="centerX" secondItem="49D-da-PPo" secondAttribute="centerX" id="Oei-B7-JsU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zw7-HV-ljU" secondAttribute="trailing" constant="8" id="Uif-Jm-y4Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="49D-da-PPo" secondAttribute="trailing" constant="159" id="YdM-JP-Vrx"/>
+                            <constraint firstItem="JhL-Nv-VAJ" firstAttribute="top" secondItem="49D-da-PPo" secondAttribute="bottom" constant="5" id="avs-xv-hhA"/>
+                            <constraint firstItem="49D-da-PPo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="b26-hZ-5et"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JhL-Nv-VAJ" secondAttribute="trailing" constant="8" id="bd8-LM-lkb"/>
+                            <constraint firstItem="JhL-Nv-VAJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="eMc-Nn-VNi"/>
+                            <constraint firstItem="49D-da-PPo" firstAttribute="top" secondItem="7rC-Gm-UoR" secondAttribute="bottom" constant="19" id="hbr-IK-SJv"/>
+                            <constraint firstItem="HGg-Gx-1UB" firstAttribute="leading" secondItem="7rC-Gm-UoR" secondAttribute="leading" id="i6L-P3-2TG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EDt-ZV-EfT" secondAttribute="trailing" constant="71" id="iby-Wb-zcX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7rC-Gm-UoR" secondAttribute="trailing" constant="90" id="k5w-Mp-ipT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JhL-Nv-VAJ" secondAttribute="bottom" constant="8" id="kiX-wO-LPe"/>
+                            <constraint firstItem="Hx8-5D-mgf" firstAttribute="centerX" secondItem="Zw7-HV-ljU" secondAttribute="centerX" id="klk-Jd-2W3"/>
+                            <constraint firstItem="Zw7-HV-ljU" firstAttribute="top" secondItem="EDt-ZV-EfT" secondAttribute="bottom" constant="8" symbolic="YES" id="ovK-LN-Pm3"/>
+                            <constraint firstItem="JhL-Nv-VAJ" firstAttribute="top" secondItem="49D-da-PPo" secondAttribute="bottom" constant="8" id="pB8-YF-pEl"/>
+                            <constraint firstItem="Hx8-5D-mgf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="150" id="ssk-ur-bdk"/>
+                            <constraint firstItem="49D-da-PPo" firstAttribute="top" secondItem="7rC-Gm-UoR" secondAttribute="bottom" constant="5" id="uCg-5z-712"/>
+                            <constraint firstItem="7rC-Gm-UoR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uq8-ki-aVU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="displayLabel" destination="49D-da-PPo" id="Z3t-p8-AIx"/>
+                        <outlet property="nextButton" destination="Hx8-5D-mgf" id="hH4-12-CxD"/>
+                        <outlet property="pTitleLabel" destination="EDt-ZV-EfT" id="y9w-oD-s3S"/>
+                        <outlet property="poloniusTextView" destination="Zw7-HV-ljU" id="vH8-nT-6mo"/>
+                        <outlet property="rJTextField" destination="7rC-Gm-UoR" id="O4I-xp-FQt"/>
+                        <outlet property="rJTextView" destination="JhL-Nv-VAJ" id="5Ek-XA-7Pp"/>
+                        <outlet property="rJTitleLabel" destination="HGg-Gx-1UB" id="klZ-Lw-TwQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="132.68365817091455"/>
+            <point key="canvasLocation" x="215.94202898550725" y="-112.50000000000001"/>
         </scene>
     </scenes>
 </document>

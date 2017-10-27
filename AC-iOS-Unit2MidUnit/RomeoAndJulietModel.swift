@@ -8,7 +8,15 @@
 
 import Foundation
 
+
+
+
+enum nameState {
+    case romeo, benvolio, mercutio, invalid
+}
+
 struct RomeoAndJulietModel {
+    
     //Complete this model
     private let sceneFourTextArr = [
         """
@@ -16,7 +24,7 @@ struct RomeoAndJulietModel {
         What, shall this speech be spoke for our excuse?
         Or shall we on without a apology?
         """,
-
+        
         """
         BENVOLIO:
         The date is out of such prolixity:
@@ -28,31 +36,31 @@ struct RomeoAndJulietModel {
         But let them measure us by what they will;
         We'll measure them a measure, and be gone.
         """,
-
+        
         """
         ROMEO:
         Give me a torch: I am not for this ambling;
         Being but heavy, I will bear the light.
         """,
-
+        
         """
         MERCUTIO:
         Nay, gentle Romeo, we must have you dance.
         """,
-
+        
         """
         ROMEO:
         Not I, believe me: you have dancing shoes
         With nimble soles: I have a soul of lead
         So stakes me to the ground I cannot move.
         """,
-
+        
         """
         MERCUTIO:
         You are a lover; borrow Cupid's wings,
         And soar with them above a common bound.
         """,
-
+        
         """
         ROMEO:
         I am too sore enpierced with his shaft
@@ -60,7 +68,7 @@ struct RomeoAndJulietModel {
         I cannot bound a pitch above dull woe:
         Under love's heavy burden do I sink.
         """,
-
+        
         """
         MERCUTIO:
         And, to sink in it, should you burden love;
@@ -71,5 +79,40 @@ struct RomeoAndJulietModel {
         Is love a tender thing? it is too rough,
         Too rude, too boisterous, and it pricks like thorn.
         """
-        ]
+    ]
+    
+    ///What I wanted to do but couldn't figure out code for:
+    
+    /// after iterating thru sceneFourTextArr, if any of the indexes were even it would return .romeo
+    /// if the index of that array was == index 1 it would return .benvolio
+    /// if the index of that array was == index 3, 5 or 7it would return  .mercutio
+    
+    
+    //    func getRomeo() -> nameState {
+    //        for name in 0..<sceneFourTextArr.count{
+    //            if name % 2 == 0 {
+    //                return.romeo
+    //            }
+    //            if name == sceneFourTextArr[1] {
+    //                return .benvolio
+    //            }
+    //
+    //            if name == sceneFourTextArr[3] || name == sceneFourTextArr[5] || name == sceneFourTextArr[7] {
+    //                return .mercutio
+    //            }
+    //            return .invalid
+    //
+    //        }
+    //
+    //    }
 }
+
+
+
+
+
+
+
+
+
+
