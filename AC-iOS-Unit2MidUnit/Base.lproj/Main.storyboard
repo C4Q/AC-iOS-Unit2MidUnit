@@ -16,9 +16,154 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ysp-o3-F5G">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vG9-fL-5CB">
+                                        <rect key="frame" x="74" y="0.0" width="227" height="31.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Polonius Monologue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y10-cZ-IOx">
+                                                <rect key="frame" x="0.0" y="0.0" width="227" height="31.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="J91-Fq-Z6n">
+                                        <rect key="frame" x="67.5" y="31.5" width="240" height="50"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="I6n-7v-tEr">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="50"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="I6n-7v-tEr" firstAttribute="leading" secondItem="J91-Fq-Z6n" secondAttribute="leading" id="IMT-nS-ftu"/>
+                                            <constraint firstAttribute="bottom" secondItem="I6n-7v-tEr" secondAttribute="bottom" id="LD3-V7-GNI"/>
+                                            <constraint firstItem="I6n-7v-tEr" firstAttribute="top" secondItem="J91-Fq-Z6n" secondAttribute="top" id="h6L-yU-vWy"/>
+                                            <constraint firstAttribute="trailing" secondItem="I6n-7v-tEr" secondAttribute="trailing" id="okq-w6-KWy"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XGS-GT-36W">
+                                        <rect key="frame" x="149.5" y="81.5" width="76" height="360.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fub-7j-red">
+                                                <rect key="frame" x="0.0" y="0.0" width="76" height="360.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="Next Line"/>
+                                                <connections>
+                                                    <action selector="nextLineButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6l1-St-VuD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Fub-7j-red" secondAttribute="trailing" id="3ws-zF-kRh"/>
+                                            <constraint firstAttribute="bottom" secondItem="Fub-7j-red" secondAttribute="bottom" id="WZs-XL-Oen"/>
+                                            <constraint firstItem="Fub-7j-red" firstAttribute="top" secondItem="XGS-GT-36W" secondAttribute="top" id="drw-0a-XnQ"/>
+                                            <constraint firstItem="Fub-7j-red" firstAttribute="leading" secondItem="XGS-GT-36W" secondAttribute="leading" id="fvT-VB-v87"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3gd-8w-8ws">
+                                        <rect key="frame" x="54" y="442" width="267" height="26.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Romeo And Juliet: Scene IV " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGb-Y4-cQe">
+                                                <rect key="frame" x="0.0" y="0.0" width="267" height="26.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="jGb-Y4-cQe" firstAttribute="top" secondItem="3gd-8w-8ws" secondAttribute="top" id="1qv-kU-zjV"/>
+                                            <constraint firstItem="jGb-Y4-cQe" firstAttribute="leading" secondItem="3gd-8w-8ws" secondAttribute="leading" id="CR7-PG-Abn"/>
+                                            <constraint firstAttribute="trailing" secondItem="jGb-Y4-cQe" secondAttribute="trailing" id="WGf-d6-qtJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="jGb-Y4-cQe" secondAttribute="bottom" id="YyX-uM-suC"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Bg4-Zl-Q0a">
+                                        <rect key="frame" x="37.5" y="468.5" width="300" height="30"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Romeo, Benvolio or Mercutio" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sjy-Bg-D8K">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Sjy-Bg-D8K" firstAttribute="top" secondItem="Bg4-Zl-Q0a" secondAttribute="top" id="Jp8-cc-xQT"/>
+                                            <constraint firstAttribute="trailing" secondItem="Sjy-Bg-D8K" secondAttribute="trailing" id="NYr-aF-Gje"/>
+                                            <constraint firstItem="Sjy-Bg-D8K" firstAttribute="leading" secondItem="Bg4-Zl-Q0a" secondAttribute="leading" id="S5e-MH-Rzh"/>
+                                            <constraint firstAttribute="bottom" secondItem="Sjy-Bg-D8K" secondAttribute="bottom" id="dIr-qL-nsn"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5g7-WV-2z7">
+                                        <rect key="frame" x="128" y="498.5" width="119.5" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Incorrect Label " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5A-i2-Kbb">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="c5A-i2-Kbb" firstAttribute="top" secondItem="5g7-WV-2z7" secondAttribute="top" id="Mvq-7y-ryP"/>
+                                            <constraint firstItem="c5A-i2-Kbb" firstAttribute="leading" secondItem="5g7-WV-2z7" secondAttribute="leading" id="NRc-VX-bz0"/>
+                                            <constraint firstAttribute="trailing" secondItem="c5A-i2-Kbb" secondAttribute="trailing" id="abl-qO-aUf"/>
+                                            <constraint firstAttribute="bottom" secondItem="c5A-i2-Kbb" secondAttribute="bottom" id="c4m-7X-SOn"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="e59-zE-PbQ">
+                                        <rect key="frame" x="67.5" y="519" width="240" height="128"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ccq-Ay-VL2">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Ccq-Ay-VL2" secondAttribute="bottom" id="2ew-jf-KBl"/>
+                                            <constraint firstItem="Ccq-Ay-VL2" firstAttribute="leading" secondItem="e59-zE-PbQ" secondAttribute="leading" id="FD8-ju-gJX"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ccq-Ay-VL2" secondAttribute="trailing" id="eIj-wq-PZI"/>
+                                            <constraint firstItem="Ccq-Ay-VL2" firstAttribute="top" secondItem="e59-zE-PbQ" secondAttribute="top" id="qtC-2s-H7n"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="J91-Fq-Z6n" firstAttribute="top" secondItem="vG9-fL-5CB" secondAttribute="bottom" constant="10" id="NCA-3x-aZy"/>
+                                    <constraint firstAttribute="trailing" secondItem="vG9-fL-5CB" secondAttribute="trailing" constant="73.5" id="PVD-69-apr"/>
+                                    <constraint firstItem="vG9-fL-5CB" firstAttribute="leading" secondItem="ysp-o3-F5G" secondAttribute="leading" constant="74" id="Uan-bK-AmI"/>
+                                    <constraint firstItem="vG9-fL-5CB" firstAttribute="top" secondItem="ysp-o3-F5G" secondAttribute="top" id="cKB-37-LZO"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ysp-o3-F5G" secondAttribute="bottom" id="5aC-hg-ss9"/>
+                            <constraint firstItem="ysp-o3-F5G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8Zd-It-5a1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ysp-o3-F5G" secondAttribute="trailing" id="CLr-7A-KJl"/>
+                            <constraint firstItem="ysp-o3-F5G" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="LzQ-XK-WRp"/>
+                            <constraint firstItem="ysp-o3-F5G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U66-a0-UJ3"/>
+                            <constraint firstItem="ysp-o3-F5G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="X2K-lk-x3H"/>
+                            <constraint firstItem="ysp-o3-F5G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gat-lI-U4L"/>
+                            <constraint firstItem="ysp-o3-F5G" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yzR-Rf-TCH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="displayMonologue" destination="I6n-7v-tEr" id="go8-QG-Iz5"/>
+                        <outlet property="userInput" destination="Sjy-Bg-D8K" id="8FY-oB-dHW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
