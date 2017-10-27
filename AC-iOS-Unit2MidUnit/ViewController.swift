@@ -8,7 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
+    
+    var counter = 0
+    var monoModel = PoloniusMonologueModel()
+    var sceneModel = RomeoAndJulietModel()
     
     //  //View Outlets
     
@@ -36,6 +40,8 @@ class ViewController: UIViewController {
     
     //Action Button
     @IBAction func nextLineAction(_ button: UIButton) {
+        counter += 1
+        monoModel.addLine()
         
     }
     

@@ -8,6 +8,8 @@
 
 import Foundation
 
+//var appendArr
+
 class PoloniusMonologueModel {
     //Complete this model
     private let textArr = ["My liege, and madam, to expostulate",
@@ -18,4 +20,16 @@ class PoloniusMonologueModel {
                  "And tediousness the limbs and outward flourishes,",
                  "I will be brief. Your noble son is mad."
                 ]
+    
+    func addLine() -> Bool {
+        for line in textArr {
+            print(line)
+        }
+        return true
+    }
+    
+    
+    
+    
+    
 }
