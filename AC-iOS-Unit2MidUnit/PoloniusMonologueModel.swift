@@ -19,11 +19,16 @@ class PoloniusMonologueModel {
                  "I will be brief. Your noble son is mad."
                 ]
     var nextLine = ""
-
+    var currentIndex = 0
+    
     func showNextLine() {
-        for line in 0...textArr.count-1 {
-            nextLine = textArr[line]
+        if currentIndex <= textArr.count-1 {
+            nextLine = textArr[currentIndex]
+            currentIndex += 1
+        } else {
+          currentIndex = 0
             }
-        return 
+        }
+    
     }
-}
+
