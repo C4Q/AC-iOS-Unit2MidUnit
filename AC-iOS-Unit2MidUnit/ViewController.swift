@@ -8,11 +8,32 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITextFieldDelegate {
+    
+    let myMonologue = PoloniusMonologueModel()
+    
+    @IBOutlet weak var HeadLabel: UILabel!
+    
+    @IBOutlet weak var ActorLineTextView: UITextView!
+    
+    @IBOutlet weak var SearchOutPutTextView: UITextView!
+    
+    @IBOutlet weak var UItextViewInput: UITextField!
+    
+
+    @IBAction func NextLineButton(_ sender: UIButton) {
+        ActorLineTextView.text = myMonologue.getThextLine()
+    }
+    
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.UItextViewInput.delegate = self
     }
     
 }
