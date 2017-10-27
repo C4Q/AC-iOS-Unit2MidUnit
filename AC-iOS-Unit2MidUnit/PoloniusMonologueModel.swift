@@ -8,14 +8,26 @@
 
 import Foundation
 
+
 class PoloniusMonologueModel {
     //Complete this model
+    var counter = 0
     private let textArr = ["My liege, and madam, to expostulate",
-                 "What majesty should be, what duty is,",
-                 "What day is day, night night, and time is time,",
-                 "Were nothing but to waste night, day, and time;",
-                 "Therefore, since brevity is the soul of wit,",
-                 "And tediousness the limbs and outward flourishes,",
-                 "I will be brief. Your noble son is mad."
-                ]
+                   "What majesty should be, what duty is,",
+                   "What day is day, night night, and time is time,",
+                   "Were nothing but to waste night, day, and time;",
+                   "Therefore, since brevity is the soul of wit,",
+                   "And tediousness the limbs and outward flourishes,",
+                   "I will be brief. Your noble son is mad."
+    ]
+    
+    func printNextLine() -> String {
+        let tempLine = textArr[counter]
+        if counter != textArr.count - 1 {
+            counter += 1
+        } else if counter == textArr.count - 1 {
+            counter = 0
+        }
+        return tempLine
+    }
 }
