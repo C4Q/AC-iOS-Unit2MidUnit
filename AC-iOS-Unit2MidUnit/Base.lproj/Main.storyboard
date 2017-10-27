@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,9 +16,90 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Polonius Monologue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oW-0Z-D6l" userLabel="PoloniusMonologueLabel">
+                                <rect key="frame" x="50" y="20" width="274" height="35"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNA-9c-p25" userLabel="MonologueLines">
+                                <rect key="frame" x="16" y="71" width="343" height="67"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECk-4y-aEF" userLabel="PoloniusNextLineButton">
+                                <rect key="frame" x="155" y="158" width="65" height="50"/>
+                                <state key="normal" title="Next Line"/>
+                                <connections>
+                                    <action selector="nextLineButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rOc-rK-6uy"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Romeo, Benvolio or Mercutio" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="02c-hM-C1t" userLabel="TextEntryField">
+                                <rect key="frame" x="67" y="283" width="241.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Romeo And Juliet Scene: IV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubN-LR-lYW" userLabel="RomeoAndJulietScene:IV">
+                                <rect key="frame" x="16" y="232" width="343" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1Mh-EV-q0E" userLabel="R&amp;JSceneTextView">
+                                <rect key="frame" x="16" y="365" width="343" height="282"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="aerteyseryar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYA-7y-Qn6" userLabel="EntryStatusLabel">
+                                <rect key="frame" x="67" y="321" width="242" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ECk-4y-aEF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3Hq-4s-8OV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TNA-9c-p25" secondAttribute="trailing" constant="16" id="5M6-Es-eLa"/>
+                            <constraint firstItem="ECk-4y-aEF" firstAttribute="top" secondItem="TNA-9c-p25" secondAttribute="bottom" constant="20" id="5XN-R5-rvC"/>
+                            <constraint firstItem="8oW-0Z-D6l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8aW-pO-42P"/>
+                            <constraint firstItem="IYA-7y-Qn6" firstAttribute="top" secondItem="02c-hM-C1t" secondAttribute="bottom" constant="8" id="GkD-Js-YGq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ECk-4y-aEF" secondAttribute="trailing" constant="155" id="H3C-Qv-9Nt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Mh-EV-q0E" secondAttribute="trailing" constant="16" id="J1i-xk-WCY"/>
+                            <constraint firstItem="02c-hM-C1t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="JzL-jg-8fc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ubN-LR-lYW" secondAttribute="trailing" constant="16" id="L6d-f2-Q5e"/>
+                            <constraint firstItem="02c-hM-C1t" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LUH-lG-yRu"/>
+                            <constraint firstItem="1Mh-EV-q0E" firstAttribute="top" secondItem="IYA-7y-Qn6" secondAttribute="bottom" constant="13" id="MF8-S6-PRa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1Mh-EV-q0E" secondAttribute="bottom" constant="20" id="QKU-c8-E2b"/>
+                            <constraint firstItem="02c-hM-C1t" firstAttribute="top" secondItem="ubN-LR-lYW" secondAttribute="bottom" constant="8" id="QOy-Xl-x0A"/>
+                            <constraint firstItem="ubN-LR-lYW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Rfg-GK-nRz"/>
+                            <constraint firstItem="ubN-LR-lYW" firstAttribute="top" secondItem="ECk-4y-aEF" secondAttribute="bottom" constant="20" id="SzR-e2-d9e"/>
+                            <constraint firstItem="8oW-0Z-D6l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="UGu-P7-M88"/>
+                            <constraint firstItem="IYA-7y-Qn6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Un1-0h-s4J"/>
+                            <constraint firstItem="1Mh-EV-q0E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Vxc-fb-NQV"/>
+                            <constraint firstItem="TNA-9c-p25" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Yyg-11-lQ4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="02c-hM-C1t" secondAttribute="trailing" constant="66.5" id="cjx-AK-DIA"/>
+                            <constraint firstItem="ECk-4y-aEF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="155" id="eDJ-6Q-dBB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IYA-7y-Qn6" secondAttribute="trailing" constant="66" id="fjK-VQ-ziX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8oW-0Z-D6l" secondAttribute="trailing" constant="51" id="oVO-UZ-6RJ"/>
+                            <constraint firstItem="ubN-LR-lYW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sR0-mF-sBF"/>
+                            <constraint firstItem="IYA-7y-Qn6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="xbO-Wh-EuD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="PoloniusMonologueLabel" destination="TNA-9c-p25" id="HcW-XH-8AQ"/>
+                        <outlet property="entryStatusLabel" destination="IYA-7y-Qn6" id="yGB-KC-B8p"/>
+                        <outlet property="poloniusMonologueLabel" destination="8oW-0Z-D6l" id="6p0-jg-HDF"/>
+                        <outlet property="poloniusNextButton" destination="ECk-4y-aEF" id="Fvj-r6-Z1x"/>
+                        <outlet property="poloniusNextLineButton" destination="ECk-4y-aEF" id="xna-Di-4Mi"/>
+                        <outlet property="sceneTextView" destination="1Mh-EV-q0E" id="znR-cN-0me"/>
+                        <outlet property="textEntryField" destination="02c-hM-C1t" id="XVY-Bp-09z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
