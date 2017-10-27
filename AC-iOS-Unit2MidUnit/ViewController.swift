@@ -37,7 +37,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             SuccessLabel.isHidden = true
             TextView.text = romeoModel.getQuotation(name: name)
         case .incorrect:
-            SuccessLabel.text = "INVALID"
+            SuccessLabel.text = "INVALID NAME"
             SuccessLabel.isHidden = false
             TextView.text.removeAll()
         }

@@ -91,7 +91,6 @@ struct RomeoAndJulietModel {
     func check(name: String) -> CorrectOrNa {
         let peopleSpeaking = [Romeo, Benvolio, Mercutio]
         for person in peopleSpeaking {
-            print(person.rawValue.lowercased())
             if person.rawValue.lowercased() == name.lowercased() {
                 return CorrectOrNa.correct
             }
@@ -103,6 +102,7 @@ struct RomeoAndJulietModel {
         var requestedLines = ""
         for lines in sceneFourTextArr {
             if lines.components(separatedBy: ":").first == name.uppercased() {
+                print(lines)
                 requestedLines += "\n\(lines)"
             }
         }
