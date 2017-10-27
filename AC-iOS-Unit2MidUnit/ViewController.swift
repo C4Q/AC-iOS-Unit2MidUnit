@@ -34,6 +34,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             errorMessage.isHidden = true
             rJModel.uppercasedInput = text.uppercased()
             //the function that shows the quote
+            LargeQuoteTextView.text = rJModel.myLines()
         } else {
             errorMessage.text = "Invalid Input"
             errorMessage.isHidden = false

@@ -74,6 +74,15 @@ struct RomeoAndJulietModel {
     ]
     
     var uppercasedInput = ""
+    func myLines() -> String {
+        var lines = String()
+        for characterLines in sceneFourTextArr {
+            if characterLines.contains(uppercasedInput) {
+                lines.append(characterLines)
+            }
+        }
+        return lines
+    }
     
 
 }
