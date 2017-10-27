@@ -8,12 +8,53 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
+    @IBOutlet weak var romeoAndJulietScene: UITextField!
+    @IBOutlet weak var monologueSectionDisplayed: UITextView!
     
+    @IBOutlet weak var invalidNameMessage: UILabel!
+    
+    @IBOutlet weak var romeoAndJulietSceneDisplay: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        monologueSectionDisplayed.text = poloniusModel.nextLine()
+        self.romeoAndJulietScene.delegate = self
     }
     
+    
+    
+    var poloniusModel = PoloniusMonologueModel()
+    var romeoAndJulientModel = RomeoAndJulietModel()
+    
+    
+    
+    
+    
+    
+    
+    @IBAction func nextLinePressed(_ sender: UIButton) {
+        monologueSectionDisplayed.text = poloniusModel.nextLine()
+    }
+    
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard let character = textField.text else{
+            return false
+        }
+        let linesInScene = romeoAndJulientModel.characterlines(input: character)
+        if linesInScene == "X" {
+            invalidNameMessage.isHidden = false
+            invalidNameMessage.text = "Invalid Name"
+            textField.resignFirstResponder()
+        }else{
+        
+        invalidNameMessage.isHidden = true
+        romeoAndJulietSceneDisplay.text = linesInScene
+        textField.resignFirstResponder()
+        
+        return true
+    }
+    return true
 }
-
+}
