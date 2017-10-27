@@ -72,4 +72,40 @@ struct RomeoAndJulietModel {
         Too rude, too boisterous, and it pricks like thorn.
         """
         ]
+    
+    enum PersonSpeaking: String {
+        case ROMEO
+        case BENVOLIO
+        case MERCUTIO
+    }
+    
+    enum CorrectOrNa {
+        case correct
+        case incorrect
+    }
+    
+    let Romeo = PersonSpeaking.ROMEO
+    let Benvolio = PersonSpeaking.BENVOLIO
+    let Mercutio = PersonSpeaking.MERCUTIO
+    
+    func check(name: String) -> CorrectOrNa {
+        let peopleSpeaking = [Romeo, Benvolio, Mercutio]
+        for person in peopleSpeaking {
+            print(person.rawValue.lowercased())
+            if person.rawValue.lowercased() == name.lowercased() {
+                return CorrectOrNa.correct
+            }
+        }
+        return CorrectOrNa.incorrect
+    }
+    
+    func getQuotation(name: String) -> String {
+        var requestedLines = ""
+        for lines in sceneFourTextArr {
+            if lines.components(separatedBy: ":").first == name.uppercased() {
+                requestedLines += "\n\(lines)"
+            }
+        }
+        return requestedLines
+    }
 }

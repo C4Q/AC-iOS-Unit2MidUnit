@@ -14,6 +14,7 @@
 		5475D6681F97AB3B00AFA523 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5475D6661F97AB3B00AFA523 /* LaunchScreen.storyboard */; };
 		5475D6711F97ACEA00AFA523 /* RomeoAndJulietModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5475D6701F97ACEA00AFA523 /* RomeoAndJulietModel.swift */; };
 		5475D6731F97B5FB00AFA523 /* PoloniusMonologueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5475D6721F97B5FB00AFA523 /* PoloniusMonologueModel.swift */; };
+		C4CC7F8B1FA3AD4100492C1C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C4CC7F8A1FA3AD4100492C1C /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5475D6691F97AB3B00AFA523 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5475D6701F97ACEA00AFA523 /* RomeoAndJulietModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomeoAndJulietModel.swift; sourceTree = "<group>"; };
 		5475D6721F97B5FB00AFA523 /* PoloniusMonologueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoloniusMonologueModel.swift; sourceTree = "<group>"; };
+		C4CC7F8A1FA3AD4100492C1C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +62,11 @@
 			children = (
 				5475D66F1F97AB4500AFA523 /* Supporting Files */,
 				5475D65F1F97AB3B00AFA523 /* ViewController.swift */,
-				5475D6701F97ACEA00AFA523 /* RomeoAndJulietModel.swift */,
 				5475D6721F97B5FB00AFA523 /* PoloniusMonologueModel.swift */,
+				5475D6701F97ACEA00AFA523 /* RomeoAndJulietModel.swift */,
 				5475D6611F97AB3B00AFA523 /* Main.storyboard */,
 				5475D6691F97AB3B00AFA523 /* Info.plist */,
+				C4CC7F8A1FA3AD4100492C1C /* README.md */,
 			);
 			path = "AC-iOS-Unit2MidUnit";
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				5475D6681F97AB3B00AFA523 /* LaunchScreen.storyboard in Resources */,
 				5475D6651F97AB3B00AFA523 /* Assets.xcassets in Resources */,
+				C4CC7F8B1FA3AD4100492C1C /* README.md in Resources */,
 				5475D6631F97AB3B00AFA523 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
