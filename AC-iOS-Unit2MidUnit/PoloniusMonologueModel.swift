@@ -18,4 +18,11 @@ class PoloniusMonologueModel {
                  "And tediousness the limbs and outward flourishes,",
                  "I will be brief. Your noble son is mad."
                 ]
+    
+    func nextLine(_ count: Int) -> String {
+        
+       var value = textArr[count]
+       return value
+    }
+    
 }
