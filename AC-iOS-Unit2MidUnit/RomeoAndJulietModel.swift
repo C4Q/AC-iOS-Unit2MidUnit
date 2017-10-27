@@ -72,4 +72,31 @@ struct RomeoAndJulietModel {
         Too rude, too boisterous, and it pricks like thorn.
         """
         ]
+    private func isOwnerOfText(line: String, role: String) -> Bool {
+        let nameToMatch = role.lowercased()
+        var nameUpToColon = ""
+        for char in line {
+            guard char != ":" else {
+                break
+            }
+            nameUpToColon.append(char)
+        }
+        nameUpToColon = nameUpToColon.lowercased()
+        return nameToMatch == nameUpToColon
+    }
+    func getLines(of role: String) -> String {
+        var fullTextToReturn = ""
+        
+        for str in sceneFourTextArr where isOwnerOfText(line: str, role: role){
+            fullTextToReturn += str
+            fullTextToReturn.append("\n")
+        }
+        
+        return fullTextToReturn
+    }
+    
+    func isOkPerson(role: String) -> Bool {
+        let roleLowered = role.lowercased()
+        return ["romeo", "benvolio", "mercutio"].contains(roleLowered)
+    }
 }

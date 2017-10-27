@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,11 +15,88 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AC_iOS_Unit2MidUnit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Polonius Monologue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="611-Rb-TRd">
+                                <rect key="frame" x="119" y="35" width="176" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="whatever" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mNU-7s-6y6">
+                                <rect key="frame" x="41" y="75" width="331" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="7ML-Tq-ja8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAz-yX-Tbb">
+                                <rect key="frame" x="169" y="154" width="76" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Next Line"/>
+                                <connections>
+                                    <action selector="getNextLine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B9o-Pu-C3V"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Romeo and Juliet: Scene IV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTy-sd-50j">
+                                <rect key="frame" x="88.666666666666686" y="218" width="237" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Romeo, Benvolio, or Mercutio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C6v-ci-CJc">
+                                <rect key="frame" x="65" y="279" width="284" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="another whatever" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ghz-0f-ZDD">
+                                <rect key="frame" x="45.666666666666657" y="329" width="323" height="391"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oA-gC-UE7">
+                                <rect key="frame" x="158" y="308" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.73534650259067358" green="0.17774529038178991" blue="0.062407393527511137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="C6v-ci-CJc" firstAttribute="top" secondItem="BTy-sd-50j" secondAttribute="bottom" constant="37" id="5hU-lh-Z3t"/>
+                            <constraint firstItem="C6v-ci-CJc" firstAttribute="width" secondItem="BTy-sd-50j" secondAttribute="width" multiplier="1.2" id="7j4-cy-yvY"/>
+                            <constraint firstItem="ghz-0f-ZDD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ax5-4L-hxj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mNU-7s-6y6" secondAttribute="trailing" constant="42" id="DAw-F4-M70"/>
+                            <constraint firstItem="mNU-7s-6y6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EGH-fx-aiP"/>
+                            <constraint firstItem="BTy-sd-50j" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="H83-wT-s6Q"/>
+                            <constraint firstItem="ghz-0f-ZDD" firstAttribute="top" secondItem="C6v-ci-CJc" secondAttribute="bottom" constant="20" id="Njt-ux-7sn"/>
+                            <constraint firstItem="ghz-0f-ZDD" firstAttribute="top" secondItem="1oA-gC-UE7" secondAttribute="bottom" id="Qzk-VF-qbb"/>
+                            <constraint firstItem="1oA-gC-UE7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="T1g-O4-1JG"/>
+                            <constraint firstItem="611-Rb-TRd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="T2X-bh-TLe"/>
+                            <constraint firstItem="mNU-7s-6y6" firstAttribute="top" secondItem="611-Rb-TRd" secondAttribute="bottom" constant="16" id="ThI-Ib-Roo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ghz-0f-ZDD" secondAttribute="trailing" constant="45.5" id="VDA-vR-4rC"/>
+                            <constraint firstItem="IAz-yX-Tbb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Veu-AN-QBl"/>
+                            <constraint firstItem="IAz-yX-Tbb" firstAttribute="top" secondItem="mNU-7s-6y6" secondAttribute="bottom" constant="35" id="Zvf-uI-4rF"/>
+                            <constraint firstItem="mNU-7s-6y6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="arg-pb-95d"/>
+                            <constraint firstItem="611-Rb-TRd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fIx-1a-7al"/>
+                            <constraint firstItem="BTy-sd-50j" firstAttribute="top" secondItem="IAz-yX-Tbb" secondAttribute="bottom" constant="30" id="jVQ-rW-Mb7"/>
+                            <constraint firstItem="ghz-0f-ZDD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45.5" id="ton-Ko-aGx"/>
+                            <constraint firstItem="C6v-ci-CJc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yS9-2y-gG2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ghz-0f-ZDD" secondAttribute="bottom" constant="16" id="z4e-IS-gLp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="characterText" destination="ghz-0f-ZDD" id="GSb-O6-U2p"/>
+                        <outlet property="invalidMssg" destination="1oA-gC-UE7" id="8HR-Em-xoQ"/>
+                        <outlet property="lineToShow" destination="mNU-7s-6y6" id="H15-WY-Mh1"/>
+                        <outlet property="userInput" destination="C6v-ci-CJc" id="pWJ-Ft-MxS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
