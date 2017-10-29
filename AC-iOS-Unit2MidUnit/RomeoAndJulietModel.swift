@@ -10,9 +10,9 @@ import Foundation
 
 
 
-
-enum nameState {
-    case romeo, benvolio, mercutio, invalid
+enum NameState {
+    case romeo, invalid
+//     benvolio, mercutio,
 }
 
 struct RomeoAndJulietModel {
@@ -86,29 +86,20 @@ struct RomeoAndJulietModel {
     /// after iterating thru sceneFourTextArr, if any of the indexes were even it would return .romeo
     /// if the index of that array was == index 1 it would return .benvolio
     /// if the index of that array was == index 3, 5 or 7it would return  .mercutio
+    var currentIndex = 0
     
-    
-    //    func getRomeo() -> nameState {
-    //        for name in 0..<sceneFourTextArr.count{
-    //            if name % 2 == 0 {
-    //                return.romeo
-    //            }
-    //            if name == sceneFourTextArr[1] {
-    //                return .benvolio
-    //            }
-    //
-    //            if name == sceneFourTextArr[3] || name == sceneFourTextArr[5] || name == sceneFourTextArr[7] {
-    //                return .mercutio
-    //            }
-    //            return .invalid
-    //
-    //        }
-    //
-    //    }
+//    func getActorParagraph() -> NameState {// -> String {
+//        for i in 0..<sceneFourTextArr.count {
+//            if sceneFourTextArr[i] == sceneFourTextArr[0] {
+//                return sceneFourTextArr[i]
+//            }
+//        }
+//        
+//        return sceneFourTextArr.description
+//    }
+
+
 }
-
-
-
 
 
 

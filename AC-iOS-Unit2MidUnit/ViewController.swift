@@ -40,7 +40,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         //when button is pressed show next line
         poloniusTextView.text = poloniusRules.getNewPoemLine()
-        
     }
     
     //romeo and juliet
@@ -49,19 +48,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
             return false
         }
         
-        
-        ///I wanted to switch on the enum nameState to get the desired paragraph
-        //        switch romeoAndJulietRules.nameState{
-        //        case .romeo:
-        //            displayLabel.text = romeoAndJulietRules.getRomeo()
-        //        case .benvolio
-        //            displayLabel.text = romeoAndJulietRules.getRomeo()
-        //        case .mercutio
-        //            displayLabel.text = romeoAndJulietRules.getRomeo()
-        //        case .invalid
-        //            displayLabel.text = "Invalid Name"
-        //
-        //        }
+//        switch romeoAndJulietRules.NameState {
+//        case .romeo:
+//            rJTextView.text =  "blah"
+//        case .invalid:
+//            displayLabel.text = "Invalid Name"
+//
+//        }
+    
         resignFirstResponder()
         return true
     }
