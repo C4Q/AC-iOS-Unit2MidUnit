@@ -4,7 +4,8 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,13 +17,88 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qnf-tl-i5W" userLabel="Dialogue Text View">
+                                <rect key="frame" x="20" y="368" width="335" height="289"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8SH-cN-KBn" userLabel="Monologue Display Label">
+                                <rect key="frame" x="10" y="60.5" width="355" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="D3H-Cy-vLo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Polonius Monologue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAm-Yp-Nfz">
+                                <rect key="frame" x="20" y="25" width="335" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yk-RC-E7M">
+                                <rect key="frame" x="138.5" y="327" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.099979481815359206" blue="0.027899700691792706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTt-EV-fpl">
+                                <rect key="frame" x="155" y="176.5" width="65" height="30"/>
+                                <state key="normal" title="Next Line"/>
+                                <connections>
+                                    <action selector="nextLineButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dq5-Bx-aef"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Romeo and Juliet: Scene IV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mg8-8P-FhU">
+                                <rect key="frame" x="63" y="241.5" width="249" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x9B-Z3-ybC" userLabel="User Input Text Field">
+                                <rect key="frame" x="30" y="277" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qnf-tl-i5W" secondAttribute="bottom" constant="10" id="0du-AY-Jqo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qnf-tl-i5W" secondAttribute="trailing" constant="20" id="22Z-7W-rF9"/>
+                            <constraint firstItem="lAm-Yp-Nfz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2gU-M1-spQ"/>
+                            <constraint firstItem="DTt-EV-fpl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="D8F-6V-Jre"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8SH-cN-KBn" secondAttribute="trailing" constant="10" id="KgC-om-oJA"/>
+                            <constraint firstItem="mg8-8P-FhU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MA8-Av-1hO"/>
+                            <constraint firstItem="8yk-RC-E7M" firstAttribute="top" secondItem="x9B-Z3-ybC" secondAttribute="bottom" constant="20" id="Nj6-gb-HBu"/>
+                            <constraint firstItem="8SH-cN-KBn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="PRp-sg-ShN"/>
+                            <constraint firstItem="x9B-Z3-ybC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Qcq-hl-jyt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lAm-Yp-Nfz" secondAttribute="trailing" constant="20" id="WvF-9G-wG5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x9B-Z3-ybC" secondAttribute="trailing" constant="30" id="YDw-6m-Qyr"/>
+                            <constraint firstItem="lAm-Yp-Nfz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="dOd-nJ-m3R"/>
+                            <constraint firstItem="Qnf-tl-i5W" firstAttribute="top" secondItem="8yk-RC-E7M" secondAttribute="bottom" constant="20" id="hyQ-6i-jyn"/>
+                            <constraint firstItem="x9B-Z3-ybC" firstAttribute="top" secondItem="mg8-8P-FhU" secondAttribute="bottom" constant="10" id="pJY-2X-WqP"/>
+                            <constraint firstItem="x9B-Z3-ybC" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.85" id="pqb-RE-sRN"/>
+                            <constraint firstItem="Qnf-tl-i5W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tKG-34-Scc"/>
+                            <constraint firstItem="8yk-RC-E7M" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wBe-8m-Km4"/>
+                            <constraint firstItem="DTt-EV-fpl" firstAttribute="bottom" secondItem="mg8-8P-FhU" secondAttribute="top" constant="-35" id="waS-ee-Vrm"/>
+                            <constraint firstItem="8SH-cN-KBn" firstAttribute="top" secondItem="lAm-Yp-Nfz" secondAttribute="bottom" constant="10" id="xKG-ih-JT2"/>
+                            <constraint firstItem="x9B-Z3-ybC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yrV-eD-IkZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="dialogueTextView" destination="Qnf-tl-i5W" id="EqX-db-lOH"/>
+                        <outlet property="invalidNameLabel" destination="8yk-RC-E7M" id="chf-Xz-Td7"/>
+                        <outlet property="monologueDisplayLabel" destination="8SH-cN-KBn" id="qiE-J7-kNG"/>
+                        <outlet property="userInputTextField" destination="x9B-Z3-ybC" id="UJC-Z0-JMV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="132.68365817091455"/>
+            <point key="canvasLocation" x="137.68115942028987" y="131.25"/>
         </scene>
     </scenes>
 </document>
