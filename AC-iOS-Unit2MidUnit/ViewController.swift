@@ -34,7 +34,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegat
     @IBOutlet weak var textBox: UITextField! //P1
     
     
-    //Override View Func 
+    //Override View Func
     override func viewDidLoad() {
         super.viewDidLoad()
         InputFromMono.delegate = self
@@ -52,6 +52,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegat
         }
         else {
             ponoMono.text = monoModel.textArr[0]
+            counter = 0
             return
         }
         
@@ -66,25 +67,33 @@ class ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegat
     }
     //currentLine = monoModel.textArr[0]
     // counter = 0
-
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField.text == "ROMEO" || textField.text == "MERCUTIO" || textField.text == "BENVOLIO" || {
+        if textField.text == "Romeo".lowercased() || textField.text == "Mercutio".lowercased() || textField.text == "Benvolio".lowercased() {
+            invalidName.isHidden = true
             if sceneModel.sceneFourTextArr.contains("ROMEO".uppercased()){
+                sceneTwo.text = textField.text
+            } else if  sceneModel.sceneFourTextArr.contains("BENVOLIO".uppercased()){
                 print("hey")
-            } else if  sceneModel.sceneFourTextArr.contains("MERCUTIO".uppercased()){
+            } else if sceneModel.sceneFourTextArr.contains("MERCUTIO".uppercased()){
                 print("hey")
-            } else if 
+            }
+        return true
+        } else {
+        invalidName.isHidden = false
+        return false
+        }
     }
     
-    
 
 }
 
 
 
 
-}
+
+
 //}
 
 
