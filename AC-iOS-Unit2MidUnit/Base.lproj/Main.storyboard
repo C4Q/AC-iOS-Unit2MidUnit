@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -21,14 +21,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AC_iOS_Unit2MidUnit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="WYX-Sb-KO7" userLabel="Polonius Stack">
-                                <rect key="frame" x="0.0" y="20" width="375" height="194"/>
+                                <rect key="frame" x="0.0" y="20" width="768" height="301"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Polonius Monologue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BiH-AP-q0H" userLabel="title">
-                                        <rect key="frame" x="37.5" y="0.0" width="300" height="48"/>
+                                        <rect key="frame" x="77" y="0.0" width="614" height="75"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
                                         <color key="textColor" red="0.92507129909999997" green="0.52186900380000001" blue="0.58450520039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -43,7 +43,7 @@
                                         </variation>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="ljlfsakjdflaskdjflskjdflskjfdlaksjflkasjflaksjflaksfdjlk" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UJl-5E-cbu" userLabel="textView">
-                                        <rect key="frame" x="75" y="63" width="225" height="82"/>
+                                        <rect key="frame" x="153.5" y="119" width="461" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="0.745" green="0.27800000000000002" blue="0.309" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="18"/>
@@ -59,7 +59,7 @@
                                         </variation>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gta-AM-UKc" userLabel="nextLineButton">
-                                        <rect key="frame" x="131.5" y="160" width="112" height="34"/>
+                                        <rect key="frame" x="269" y="249" width="230" height="52"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <state key="normal" title="Next Line">
                                             <color key="titleColor" red="0.745" green="0.27800000000000002" blue="0.309" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -100,10 +100,10 @@
                                 <variation key="heightClass=regular-widthClass=regular" spacing="44"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2Nt-VN-6cr" userLabel="RomeoJuliet Stack">
-                                <rect key="frame" x="0.0" y="224" width="375" height="413"/>
+                                <rect key="frame" x="0.0" y="331" width="768" height="663"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Romeo and Juliet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KIu-Ik-Njg" userLabel="title">
-                                        <rect key="frame" x="56" y="0.0" width="263" height="41.5"/>
+                                        <rect key="frame" x="115" y="0.0" width="538" height="66.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
                                         <color key="textColor" red="0.92507129909999997" green="0.52186900380000001" blue="0.58450520039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -118,7 +118,7 @@
                                         </variation>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Romeo, Benvolio, or Mercutio" textAlignment="center" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="IDe-k7-D1C" userLabel="textInput">
-                                        <rect key="frame" x="56" y="56.5" width="263" height="49.5"/>
+                                        <rect key="frame" x="115" y="81.5" width="538" height="79.5"/>
                                         <color key="textColor" red="0.745" green="0.27800000000000002" blue="0.309" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" textContentType="name"/>
@@ -133,7 +133,7 @@
                                         </variation>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="ljlfsakjdflaskdjflskjdflskjfdlaksjflkasjflaksjflaksfdjlk" translatesAutoresizingMaskIntoConstraints="NO" id="asM-Td-nuM" userLabel="textView">
-                                        <rect key="frame" x="56" y="121" width="263" height="292"/>
+                                        <rect key="frame" x="115" y="176" width="538" height="487"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="0.745" green="0.27800000000000002" blue="0.309" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="18"/>
