@@ -59,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				5475D66F1F97AB4500AFA523 /* Supporting Files */,
+				5475D65D1F97AB3B00AFA523 /* AppDelegate.swift */,
 				5475D65F1F97AB3B00AFA523 /* ViewController.swift */,
 				5475D6701F97ACEA00AFA523 /* RomeoAndJulietModel.swift */,
 				5475D6721F97B5FB00AFA523 /* PoloniusMonologueModel.swift */,
@@ -71,7 +72,6 @@
 		5475D66F1F97AB4500AFA523 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5475D65D1F97AB3B00AFA523 /* AppDelegate.swift */,
 				5475D6641F97AB3B00AFA523 /* Assets.xcassets */,
 				5475D6661F97AB3B00AFA523 /* LaunchScreen.storyboard */,
 			);
