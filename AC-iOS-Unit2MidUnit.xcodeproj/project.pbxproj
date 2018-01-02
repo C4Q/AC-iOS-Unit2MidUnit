@@ -13,6 +13,7 @@
 		5475D6681F97AB3B00AFA523 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5475D6661F97AB3B00AFA523 /* LaunchScreen.storyboard */; };
 		5475D6711F97ACEA00AFA523 /* RomeoAndJulietModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5475D6701F97ACEA00AFA523 /* RomeoAndJulietModel.swift */; };
 		5475D6731F97B5FB00AFA523 /* PoloniusMonologueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5475D6721F97B5FB00AFA523 /* PoloniusMonologueModel.swift */; };
+		E2A0DBE51FFC227200D7846B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2A0DBE41FFC227200D7846B /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5475D6691F97AB3B00AFA523 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5475D6701F97ACEA00AFA523 /* RomeoAndJulietModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomeoAndJulietModel.swift; sourceTree = "<group>"; };
 		5475D6721F97B5FB00AFA523 /* PoloniusMonologueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoloniusMonologueModel.swift; sourceTree = "<group>"; };
+		E2A0DBE41FFC227200D7846B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				5475D6701F97ACEA00AFA523 /* RomeoAndJulietModel.swift */,
 				5475D6721F97B5FB00AFA523 /* PoloniusMonologueModel.swift */,
 				5475D6691F97AB3B00AFA523 /* Info.plist */,
+				E2A0DBE41FFC227200D7846B /* Main.storyboard */,
 			);
 			path = "AC-iOS-Unit2MidUnit";
 			sourceTree = "<group>";
@@ -134,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2A0DBE51FFC227200D7846B /* Main.storyboard in Resources */,
 				5475D6681F97AB3B00AFA523 /* LaunchScreen.storyboard in Resources */,
 				5475D6651F97AB3B00AFA523 /* Assets.xcassets in Resources */,
 			);
