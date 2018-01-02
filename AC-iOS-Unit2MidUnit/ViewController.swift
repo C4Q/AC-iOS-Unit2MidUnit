@@ -10,8 +10,9 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
+    //Polonius
+    
     var polonius = PoloniusMonologueModel()
-    var romeoJuliet = RomeoAndJulietModel()
     
     var poloniusStackView: UIStackView = {
         let stackView = UIStackView()
@@ -48,7 +49,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return textView
     }()
     
-    let nextLineButton: UIButton = {
+    lazy var nextLineButton: UIButton = {
         let button = UIButton()
         
         button.setTitle("Next Line", for: .normal)
@@ -56,14 +57,63 @@ class ViewController: UIViewController, UITextFieldDelegate {
         button.setTitleColor(UIColor(red: 0.745, green: 0.278, blue: 0.309, alpha: 1)
 , for: .normal)
         button.titleLabel?.textAlignment = .center
+        button.addTarget(self, action: #selector(nextLineButtonPressed), for: .touchUpInside)
         
         return button
     }()
     
-    @IBOutlet weak var poloniusMonologueTextView: UITextView!
-    @IBOutlet weak var romeoJulietTextField: UITextField!
-    @IBOutlet weak var romeoJulietTextView: UITextView!
+    //Romeo and Juliet
     
+    var romeoJuliet = RomeoAndJulietModel()
+    
+    var romeoJulietStackView: UIStackView = {
+        let stackView = UIStackView()
+        
+        stackView.axis = .vertical
+        stackView.alignment = .center
+        stackView.distribution = .fill
+        stackView.spacing = 15
+        
+        return stackView
+    }()
+    
+    var romeoJulietTitleLabel: UILabel = {
+        let label = UILabel()
+        
+        label.text = "Romeo and Juliet"
+        label.textColor = UIColor(red: 0.925, green: 0.522, blue: 0.585, alpha: 1)
+        label.textAlignment = .center
+        label.font = UIFont(name: "Futura-Medium", size: 28)
+
+        return label
+    }()
+    
+    var romeoJulietTextField: UITextField = {
+        let textField = UITextField()
+        
+        textField.text = ""
+        textField.placeholder = "Enter Romeo, Benvolio, or Mercutio"
+        textField.textAlignment = .center
+        textField.textColor = UIColor(red: 0.745, green: 0.278, blue: 0.309, alpha: 1)
+        textField.backgroundColor = .white
+        textField.font = UIFont(name: "Futura-Medium", size: 15)
+        textField.borderStyle = .roundedRect
+        
+        return textField
+    }()
+    
+    lazy var romeoJulietTextView: UITextView = {
+        let textView = UITextView()
+        
+        textView.text = ""
+        textView.textAlignment = .left
+        textView.textColor = UIColor(red: 0.745, green: 0.278, blue: 0.309, alpha: 1)
+        textView.font = UIFont(name: "Futura-MediumItalic", size: 18)
+        textView.backgroundColor = .white
+        roundEdgesOf(textView)
+        
+        return textView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,21 +126,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         self.view.addSubview(poloniusStackView)
         
-        setUpConstraints()
+        romeoJulietStackView.addArrangedSubview(romeoJulietTitleLabel)
+        romeoJulietStackView.addArrangedSubview(romeoJulietTextField)
+        romeoJulietTextField.delegate = self
+        romeoJulietStackView.addArrangedSubview(romeoJulietTextView)
         
-//        roundEdgesOf(poloniusMonologueTextView)
-//        roundEdgesOf(romeoJulietTextView)
-//        poloniusMonologueTextView.text = polonius.firstLine
-//        romeoJulietTextView.text = ""
-//        romeoJulietTextField.delegate = self
+        self.view.addSubview(romeoJulietStackView)
+        
+        setUpConstraints()
+    }
+    
+    @objc func nextLineButtonPressed() {
+        poloniusTextView.text = polonius.nextLine()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
-    }
-    
-    @IBAction func nextLineButtonPressed(_ sender: UIButton) {
-        poloniusMonologueTextView.text = polonius.nextLine()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -125,6 +176,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
         poloniusTextView.setContentHuggingPriority(UILayoutPriority(250), for: .vertical)
         poloniusTextView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         poloniusTextView.widthAnchor.constraint(equalTo: poloniusStackView.widthAnchor, multiplier: 0.6).isActive = true
+        
+        romeoJulietStackView.translatesAutoresizingMaskIntoConstraints = false
+        romeoJulietStackView.topAnchor.constraint(equalTo: poloniusStackView.bottomAnchor, constant: 10).isActive = true
+        romeoJulietStackView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -30).isActive = true
+        romeoJulietStackView.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
+        romeoJulietStackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        
+       romeoJulietTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        romeoJulietTitleLabel.heightAnchor.constraint(equalTo: romeoJulietStackView.heightAnchor, multiplier: 0.1).isActive = true
+        romeoJulietTitleLabel.widthAnchor.constraint(equalTo: romeoJulietStackView.widthAnchor, multiplier: 0.7).isActive = true
+        
+        romeoJulietTextField.translatesAutoresizingMaskIntoConstraints = false
+        romeoJulietTextField.heightAnchor.constraint(equalTo: romeoJulietTitleLabel.heightAnchor, multiplier: 1.2).isActive = true
+        romeoJulietTextField.widthAnchor.constraint(equalTo: romeoJulietStackView.widthAnchor, multiplier: 0.7).isActive = true
+        
+        romeoJulietTextView.translatesAutoresizingMaskIntoConstraints = false
+        romeoJulietTextView.widthAnchor.constraint(equalTo: romeoJulietStackView.widthAnchor, multiplier: 0.7).isActive = true
     }
     
     func roundEdgesOf(_ textView: UITextView) {

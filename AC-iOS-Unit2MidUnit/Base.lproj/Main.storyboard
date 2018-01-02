@@ -73,9 +73,6 @@
                                         <variation key="heightClass=regular-widthClass=compact">
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         </variation>
-                                        <connections>
-                                            <action selector="nextLineButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zJZ-UI-bRh"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -118,7 +115,7 @@
                                         </variation>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Romeo, Benvolio, or Mercutio" textAlignment="center" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="IDe-k7-D1C" userLabel="textInput">
-                                        <rect key="frame" x="115" y="81.5" width="538" height="79.5"/>
+                                        <rect key="frame" x="115" y="81.5" width="538" height="80"/>
                                         <color key="textColor" red="0.745" green="0.27800000000000002" blue="0.309" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" textContentType="name"/>
@@ -133,7 +130,7 @@
                                         </variation>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="ljlfsakjdflaskdjflskjdflskjfdlaksjflkasjflaksjflaksfdjlk" translatesAutoresizingMaskIntoConstraints="NO" id="asM-Td-nuM" userLabel="textView">
-                                        <rect key="frame" x="115" y="176" width="538" height="487"/>
+                                        <rect key="frame" x="115" y="176.5" width="538" height="486.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="0.745" green="0.27800000000000002" blue="0.309" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="18"/>
@@ -197,11 +194,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="poloniusMonologueTextView" destination="UJl-5E-cbu" id="uT8-CD-ERa"/>
-                        <outlet property="romeoJulietTextField" destination="IDe-k7-D1C" id="uKz-un-xA7"/>
-                        <outlet property="romeoJulietTextView" destination="asM-Td-nuM" id="k1O-Ol-pX2"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
