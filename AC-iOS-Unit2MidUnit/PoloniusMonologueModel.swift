@@ -10,6 +10,7 @@ import Foundation
 
 class PoloniusMonologueModel {
     //Complete this model
+
     private let textArr = ["My liege, and madam, to expostulate",
                  "What majesty should be, what duty is,",
                  "What day is day, night night, and time is time,",
@@ -18,4 +19,22 @@ class PoloniusMonologueModel {
                  "And tediousness the limbs and outward flourishes,",
                  "I will be brief. Your noble son is mad."
                 ]
+    private var totalLines: Int
+    private var currentLine: Int
+    
+    init() {
+        totalLines = self.textArr.count
+        currentLine = 1
+    }
+    
+    func getNextLine() -> String {
+        let nextLine = self.textArr[currentLine % totalLines]
+        self.currentLine += 1
+        return nextLine
+    }
+    
+    func getFirstLine() -> String {
+        return self.textArr[0]
+    }
+    
 }
