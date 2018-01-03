@@ -8,9 +8,15 @@
 
 import Foundation
 
+enum PlayCharacters {
+    case romeo, benvolio, mercutio, invalidInput
+}
+
+var characterPlayLines = ""
+
 struct RomeoAndJulietModel {
     //Complete this model
-    private let sceneFourTextArr = [
+    let sceneFourTextArr = [
         """
         ROMEO:
         What, shall this speech be spoke for our excuse?
@@ -72,4 +78,18 @@ struct RomeoAndJulietModel {
         Too rude, too boisterous, and it pricks like thorn.
         """
         ]
+    mutating func charTextCheck(_ charName: String) -> PlayCharacters {
+        
+        if charName.lowercased() == "romeo" {
+            for num in 0..<sceneFourTextArr.count {
+                if sceneFourTextArr[num].contains("romeo") {
+                    characterPlayLines.append("\(sceneFourTextArr[num])\n")
+                }
+            }
+            print("romeo")
+            return .romeo
+            
+        }
+        return .invalidInput
+    }
 }
