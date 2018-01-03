@@ -48,22 +48,37 @@ class ViewController: UIViewController, UITextFieldDelegate {
     lazy var romeoTextField: UITextField = {
         let textfield = UITextField()
         textfield.textAlignment = .center
-        textfield.placeholder = "input here"
+        textfield.placeholder = "Enter Romeo, Benvolio, or Mercutio"
         //textfield.backgroundColor = .red
         return textfield
     }()
+    
     lazy var romeoTextView: UITextView = {
         let textView = UITextView()
         textView.text = "Text here"
         return textView
     }()
+    
+    lazy var invalidLabel: UILabel = {
+        let label = UILabel()
+        label.text = ""
+        label.textAlignment = .center
+        return label
+    }()
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard let text = romeoTextField.text else {
             return false
         }
         switch rModel.charTextCheck(text) {
-        case .romeo:
-            textbox.text = characterPlayLines
+        case .romeo, .benvolio, .mercutio:
+            romeoTextView.text = characterPlayLines
+            textField.clearsOnBeginEditing = true
+            invalidLabel.isHidden = true
+        case .invalidInput:
+            romeoTextView.text = ""
+            invalidLabel.text = "Invalid Name"
+            invalidLabel.isHidden = false
 
         }
         romeoTextField.resignFirstResponder()
@@ -89,6 +104,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.view.addSubview(romeoLabel)
         self.view.addSubview(romeoTextField)
         self.view.addSubview(romeoTextView)
+        self.view.addSubview(invalidLabel)
     }
     
     func setConstraints() {
@@ -121,8 +137,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         romeoTextView.translatesAutoresizingMaskIntoConstraints = false
         romeoTextView.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.8).isActive = true
         romeoTextView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.3).isActive = true
-        romeoTextView.topAnchor.constraint(equalTo: romeoTextField.bottomAnchor, constant: 20).isActive = true
+        romeoTextView.topAnchor.constraint(equalTo: invalidLabel.bottomAnchor, constant: 20).isActive = true
         romeoTextView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        
+        invalidLabel.translatesAutoresizingMaskIntoConstraints = false
+        invalidLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        invalidLabel.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.5).isActive = true
+        invalidLabel.topAnchor.constraint(equalTo: romeoTextField.bottomAnchor, constant: 20).isActive = true
     }
 }
 
