@@ -52,17 +52,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //textfield.backgroundColor = .red
         return textfield
     }()
-    
+    lazy var romeoTextView: UITextView = {
+        let textView = UITextView()
+        textView.text = "Text here"
+        return textView
+    }()
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard let text = romeoTextField.text else {
             return false
         }
-//        switch rModel.charTextCheck(text) {
-//        case .romeo:
-//            textbox.text = characterPlayLines
-//
-//        }
-//        romeoTextField.resignFirstResponder()
+        switch rModel.charTextCheck(text) {
+        case .romeo:
+            textbox.text = characterPlayLines
+
+        }
+        romeoTextField.resignFirstResponder()
         return true
     }
     
@@ -84,6 +88,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.view.addSubview(nextLineButton)
         self.view.addSubview(romeoLabel)
         self.view.addSubview(romeoTextField)
+        self.view.addSubview(romeoTextView)
     }
     
     func setConstraints() {
@@ -112,6 +117,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         romeoTextField.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.6)
         romeoTextField.topAnchor.constraint(equalTo: romeoLabel.bottomAnchor, constant: 20).isActive = true
         romeoTextField.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        
+        romeoTextView.translatesAutoresizingMaskIntoConstraints = false
+        romeoTextView.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.8).isActive = true
+        romeoTextView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.3).isActive = true
+        romeoTextView.topAnchor.constraint(equalTo: romeoTextField.bottomAnchor, constant: 20).isActive = true
+        romeoTextView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
     }
 }
 
