@@ -10,12 +10,24 @@ import Foundation
 
 class PoloniusMonologueModel {
     //Complete this model
-    private let textArr = ["My liege, and madam, to expostulate",
-                 "What majesty should be, what duty is,",
-                 "What day is day, night night, and time is time,",
-                 "Were nothing but to waste night, day, and time;",
-                 "Therefore, since brevity is the soul of wit,",
-                 "And tediousness the limbs and outward flourishes,",
-                 "I will be brief. Your noble son is mad."
-                ]
+    static let textArr = ["My liege, and madam, to expostulate",
+                          "What majesty should be, what duty is,",
+                          "What day is day, night night, and time is time,",
+                          "Were nothing but to waste night, day, and time;",
+                          "Therefore, since brevity is the soul of wit,",
+                          "And tediousness the limbs and outward flourishes,",
+                          "I will be brief. Your noble son is mad."
+    ]
+    
+    func nextLine() -> String {
+        let currentLine = PoloniusMonologueModel.textArr[currentIndex]
+        currentIndex += 1
+        if currentIndex == PoloniusMonologueModel.textArr.count {
+            currentIndex = 0
+        }
+        return currentLine
+    }
+    private var currentIndex = 0
 }
+
+
